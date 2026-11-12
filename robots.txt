@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nicole-lurz.com/sitemap.xml

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Danke · Business &amp; Life Blueprint 2027</title>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+:root{
+  --nachtblau:#0F2340;--tiefblau:#1E3A5F;--kupfer:#B85450;--kupfer-hell:#D98A85;
+  --papier:#FAF7F0;--offwhite:#F6F1E8;--tinte:#1C1C1C;
+  --papier-soft:rgba(250,247,240,.78);--papier-line:rgba(250,247,240,.14);--tinte-soft:rgba(28,28,28,.68);--line:rgba(15,35,64,.12);
+  --serif:'Spectral',Georgia,serif;--sans:'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--papier);color:var(--tinte);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--kupfer);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+
+/* Hero */
+.hero{position:relative;background:var(--nachtblau);color:var(--papier);padding:120px 0 110px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-30%;right:-12%;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(184,84,80,.32),transparent 65%)}
+.hero::after{content:"";position:absolute;bottom:-40%;left:-15%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(30,58,95,.9),transparent 70%)}
+.hero .wrap{position:relative;z-index:2}
+.brand{font-family:var(--serif);font-size:22px;color:var(--papier);text-decoration:none;position:absolute;top:-72px;left:24px}
+.brand em{color:var(--kupfer-hell)}
+.check{width:64px;height:64px;border-radius:50%;border:1px solid var(--papier-line);display:grid;place-items:center;margin-bottom:30px;background:rgba(250,247,240,.04)}
+.check svg{width:28px;height:28px;stroke:var(--kupfer-hell);stroke-dasharray:40;stroke-dashoffset:40;animation:draw .9s .3s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .eyebrow{color:var(--kupfer-hell)}
+.hero h1{font-size:clamp(40px,6.4vw,74px);margin:18px 0 22px;max-width:980px}
+.hero h1 em{display:block;font-style:italic;font-weight:400;color:var(--kupfer-hell);font-size:.62em;margin-top:10px}
+.hero p.lead{font-size:18px;color:var(--papier-soft);max-width:620px}
+
+/* Schritte */
+section{padding:96px 0}
+h2{font-size:clamp(32px,4.4vw,46px);margin:14px 0 40px}
+h2 em{font-style:italic;color:var(--kupfer)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 28px 30px;box-shadow:0 20px 50px -30px rgba(15,35,64,.25)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:block;font-family:var(--serif);font-style:italic;font-size:34px;color:var(--kupfer);line-height:1;margin-bottom:18px}
+.step h3{font-size:23px;color:var(--nachtblau);margin-bottom:10px}
+.step p{font-size:15.5px;color:var(--tinte-soft)}
+.step .btn{margin-top:20px}
+.note{margin-top:26px;font-size:15px;color:var(--tinte-soft);display:flex;gap:12px;align-items:flex-start}
+.note svg{flex:0 0 20px;margin-top:3px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--kupfer);color:var(--papier);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.04em;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;transition:transform .25s,background .25s}
+.btn:hover{background:#A3473F;transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+
+/* Termine */
+.dates{background:var(--offwhite)}
+.timeline{list-style:none;position:relative;max-width:720px}
+.timeline::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:rgba(184,84,80,.35)}
+.timeline li{position:relative;padding:0 0 30px 44px}
+.timeline li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border-radius:50%;background:var(--papier);border:2px solid var(--kupfer)}
+.timeline li.soft::before{border-style:dashed}
+.timeline .d{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--kupfer)}
+.timeline .t{font-family:var(--serif);font-size:24px;color:var(--nachtblau);line-height:1.3}
+.timeline .m{font-size:14.5px;color:var(--tinte-soft)}
+.early{margin-top:14px;max-width:720px;padding:22px 24px;border-radius:16px;background:rgba(184,84,80,.1);border:1px solid rgba(184,84,80,.25);font-size:15.5px}
+.early b{color:var(--kupfer)}
+
+/* Gruss */
+.bye{background:var(--nachtblau);color:var(--papier)}
+.bye .wrap{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:center}
+.bye img{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:3px solid rgba(217,138,133,.5)}
+.bye p{font-size:18px;color:var(--papier-soft);max-width:560px}
+.bye .sig{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--kupfer-hell);margin-top:16px;line-height:1}
+
+footer{background:#0A1830;color:rgba(250,247,240,.6);font-size:13px;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--papier)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.check svg{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+
+@media (max-width:860px){
+  .steps{grid-template-columns:1fr}
+  .bye .wrap{grid-template-columns:1fr;gap:28px}
+  .bye img{width:150px;height:150px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:72px 0}
+  .hero{padding:110px 0 80px}
+  .brand{left:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="../">Nicole <em>Lurz</em></a>
+    <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div class="eyebrow">Buchung erfolgreich</div>
+    <h1>Schön, dass du dabei bist.<em>Dein Blueprint 2027 beginnt am 18. Dezember.</em></h1>
+    <p class="lead">Ich freue mich darauf, mit dir und den anderen Frauen in der Gruppe dein Jahr 2027 zu planen.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow reveal">So geht es weiter</div>
+    <h2 class="reveal">Was in den nächsten Minuten <em>passiert</em></h2>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>Deine Bestätigung</h3>
+        <p>Du bekommst gleich eine E-Mail mit der Bestätigung deiner Buchung.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Dein Zugang zum Member-Bereich</h3>
+        <p>Danach kommt eine zweite E-Mail mit deinem Zugang zum Member-Bereich. Dort liegen später auch die Aufzeichnungen aller Termine, falls du einmal nicht live dabei sein kannst.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Deine Termine im Kalender</h3>
+        <p>Trag dir die vier Live-Termine am besten gleich ein. Alle Termine sind online um 9 Uhr und dauern jeweils 90 Minuten.</p>
+        <button class="btn" type="button" id="ics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>In den Kalender</button>
+      </div>
+    </div>
+    <p class="note reveal"><svg viewBox="0 0 24 24" fill="none" stroke="#B85450" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>Keine E-Mail angekommen? Dann schau bitte auch in deinen Spam- oder Werbe-Ordner.</p>
+  </div>
+</section>
+
+<section class="dates">
+  <div class="wrap">
+    <div class="eyebrow reveal">Deine Termine</div>
+    <h2 class="reveal">Vom Business Reset bis zum <em>Flow</em></h2>
+    <ul class="timeline reveal">
+      <li><div class="d">Fr, 18.12.2026 · 9 Uhr</div><div class="t">Business Reset</div><div class="m">Live online, 90 Minuten</div></li>
+      <li class="soft"><div class="d">Über die Weihnachtstage</div><div class="t">Deine KI-Vorbereitung</div><div class="m">In deinem eigenen Tempo mit der Vorlage</div></li>
+      <li><div class="d">Mi, 06.01.2027 · 9 Uhr</div><div class="t">Revenue &amp; Offer Strategy</div><div class="m">Live online, 90 Minuten</div></li>
+      <li><div class="d">Fr, 08.01.2027 · 9 Uhr</div><div class="t">Business &amp; Life Planning</div><div class="m">Live online, 90 Minuten</div></li>
+      <li><div class="d">Fr, 15.01.2027 · 9 Uhr</div><div class="t">Creative Execution &amp; Flow</div><div class="m">Live online, 90 Minuten</div></li>
+    </ul>
+    <p class="early reveal" id="early">Du hast bis zum 30.11.2026 gebucht und gehörst zu den ersten fünf? Dann ist die Bonus-Session <b>„Angebotsstrategie 2027“</b> für dich mit dabei.</p>
+  </div>
+</section>
+
+<section class="bye">
+  <div class="wrap">
+    <img class="reveal" src="../images/nicole-sw.jpg" alt="Nicole Lurz" width="200" height="200" loading="lazy">
+    <div class="reveal">
+      <p>Bis zum 18. Dezember. Bring dein Jahr 2026 einfach so mit, wie es gerade ist, den Rest machen wir gemeinsam.</p>
+      <div class="sig">Nicole</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Nicole Lurz · Business-Mentoring</span>
+    <span><a href="https://nicole-lurz.de/impressum/">Impressum</a> · <a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Reveal beim Scrollen
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  // Early-Bird-Hinweis nur bis 30.11.2026 zeigen
+  if(new Date()>new Date('2026-11-30T23:59:59+01:00')){var eb=document.getElementById('early');if(eb)eb.remove()}
+
+  // Kalenderdatei mit den vier Live-Terminen (9:00-10:30 Uhr deutscher Zeit = 8:00-9:30 UTC)
+  var termine=[['20261218','Business Reset'],['20270106','Revenue & Offer Strategy'],['20270108','Business & Life Planning'],['20270115','Creative Execution & Flow']];
+  document.getElementById('ics').addEventListener('click',function(){
+    var now=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+    var lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Nicole Lurz//Blueprint 2027//DE','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
+    termine.forEach(function(t,i){
+      lines.push('BEGIN:VEVENT','UID:blueprint2027-'+(i+1)+'@nicole-lurz.com','DTSTAMP:'+now,'DTSTART:'+t[0]+'T080000Z','DTEND:'+t[0]+'T093000Z',
+        'SUMMARY:Blueprint 2027 · '+t[1],'DESCRIPTION:Business & Life Blueprint 2027 mit Nicole Lurz. Live-Termin online.','LOCATION:Online','END:VEVENT');
+    });
+    lines.push('END:VCALENDAR');
+    var blob=new Blob([lines.join('\r\n')],{type:'text/calendar;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='blueprint-2027-termine.ics';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);
+  });
+})();
+</script>
+</body>
+</html>
