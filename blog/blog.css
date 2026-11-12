@@ -97,3 +97,51 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
   .fuss a{margin:0 18px 0 0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.karte{transition:none}}
+
+/* Autorenkasten lang, Quellen (ergänzt 12.11.2026) */
+.autorin{align-items:start}
+.autorin p + p{margin-top:10px}
+.autorin .hinweis{font-size:13px;color:var(--leise);font-style:italic}
+.quellen{margin:0 0 110px;font-size:14px;color:var(--leise)}
+.quellen h2{font-size:18px;font-weight:600;color:var(--tinte);margin-bottom:12px}
+.quellen h3{font-size:14px;font-weight:600;color:var(--text);margin:18px 0 6px}
+.quellen ul{margin-left:18px}
+.quellen li{margin-bottom:6px}
+.quellen a{color:var(--leise)}
+.cta{margin-bottom:56px}
+.einblick p + p{margin-top:14px}
+
+/* Artikel-Layout mit Seitenleiste (12.11.2026, nach Beispiel Nicole) */
+.artikel-raster{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:72px;justify-content:space-between}
+.artikel-haupt{min-width:0}
+.artikel-raster .artikel-kopf{padding:56px 0 32px}
+.brotkrumen span{margin:0 4px;color:var(--leise)}
+.brotkrumen .hier{color:var(--tinte);margin:0}
+.artikel-raster h1{font-size:clamp(32px,4.2vw,50px);line-height:1.1;margin:14px 0 26px}
+.autor-zeile{display:flex;align-items:center;gap:14px;margin-bottom:14px;font-size:16px;color:var(--leise)}
+.autor-zeile img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 20%;border:2px solid #fff;box-shadow:0 0 0 1px var(--linie)}
+.autor-zeile strong{color:var(--tinte)}
+.punkt{margin:0 6px;color:var(--leise)}
+.teaser{font-size:21px;line-height:1.6;color:var(--leise);margin-top:28px;font-weight:300}
+.kurz{background:var(--fastweiss);border:1px solid rgba(122,168,144,.45);border-radius:14px;padding:26px 30px;margin:0 0 40px}
+.kurz .eyebrow{margin-bottom:12px}
+.kurz ul{list-style:none}
+.kurz li{position:relative;padding-left:22px;margin-bottom:8px;font-size:17px;line-height:1.55}
+.kurz li::before{content:"";position:absolute;left:2px;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--seafoam)}
+.seitenleiste{padding-top:150px}
+.leiste-innen{position:sticky;top:28px}
+.toc{display:flex;flex-direction:column;gap:2px}
+.toc .eyebrow{color:var(--tinte);margin:0 0 12px 12px}
+.toc a{display:block;padding:9px 12px;border-radius:8px;font-size:15px;line-height:1.4;color:var(--leise);text-decoration:none}
+.toc a:hover{color:var(--tinte)}
+.toc a.aktiv{background:var(--fastweiss);color:var(--tinte);font-weight:500}
+.leiste-cta{margin-top:28px;padding:20px;border-radius:10px;background:var(--tannenmoos)}
+.leiste-cta p{color:var(--fastweiss);font-size:15px;margin-bottom:10px}
+.leiste-cta a{color:var(--seafoam);font-weight:600;font-size:14px}
+.inhalt-mobil{display:none}
+@media (max-width:1000px){
+  .artikel-raster{grid-template-columns:1fr;gap:0}
+  .seitenleiste{display:none}
+  .inhalt-mobil{display:block}
+}
+@media (max-width:560px){.teaser{font-size:18px}.kurz{padding:22px 20px}}
