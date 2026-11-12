@@ -187,3 +187,9 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
 .alle{background:none;border:0;font:600 14px var(--sans);color:var(--waldgruen);cursor:pointer;text-decoration:underline}
 .artikel-liste li[hidden]{display:none}
 @media (max-width:760px){.kat-raster{grid-template-columns:1fr}.kat-bild{width:64px;height:64px;border-radius:14px}.kat-bild svg{width:30px;height:30px}.kat-text strong{font-size:18px}}
+
+/* Hauptmenü wie auf der Startseite (12.11.2026) */
+.kopf ul{display:flex;gap:30px;list-style:none}
+.kopf ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--salbei-hell);transition:color .2s}
+.kopf ul a:hover,.kopf ul a[aria-current]{color:var(--fastweiss)}
+@media (max-width:960px){.kopf ul li:not(.immer){display:none}}
