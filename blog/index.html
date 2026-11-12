@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blog · Nicole Lurz</title>
-<meta name="description" content="Nicole Lurz, Heilpraktikerin und Mentorin, schreibt über Wechseljahre, Hormone, Schilddrüse, Energie und Stoffwechsel.">
+<meta name="description" content="Nicole Lurz, Heilpraktikerin und Mentorin, schreibt über Gesundheit und Unternehmertum und darüber, warum die Energie auf einmal nicht mehr reicht.">
 <link rel="canonical" href="https://nicole-lurz.com/blog/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nicole-lurz.com/blog/">
@@ -33,28 +33,59 @@
   <section class="blog-hero">
     <div class="wrap">
       <p class="eyebrow">Blog</p>
-      <h1>Was mir in der Praxis <em>jeden Tag begegnet</em></h1>
-      <p>Hier schreibe ich über die Fragen, mit denen Frauen zu mir kommen, also Wechseljahre, Hormone, Schilddrüse und warum die Energie auf einmal nicht mehr reicht. Ich erkläre dir die Zusammenhänge so, dass du danach selbst besser einordnen kannst, was in deinem Körper los ist.</p>
+      <h1>Ich bringe die Fäden <em>wieder zusammen</em></h1>
+      <p>Manchmal spürst du, dass etwas nicht mehr passt. Vielleicht sendet dein Körper Signale, oder im Business steht etwas an, das du schon länger vor dir herschiebst. Und irgendwann fragst du dich, wer du eigentlich bist und was du wirklich willst.</p>
+      <p>Hier schreibe ich über das, was Frauen ab der Lebensmitte bewegt. Meistens geht es um Gesundheit und Energie oder um die Frage, wer man in dieser Lebensphase eigentlich sein will. Und genauso oft geht es ums eigene Business, weil das eine vom anderen gar nicht so weit weg ist.</p>
+      <p>Mich interessieren die Zusammenhänge hinter den Dingen. Ich möchte dir Wissen und neue Blickwinkel mitgeben, damit du deine Situation besser verstehst und deinen eigenen Weg klarer siehst.</p>
+    </div>
+  </section>
+
+  <section class="kategorien">
+    <div class="wrap">
+      <p class="eyebrow">Themen</p>
+      <div class="kat-raster">
+        <button class="kategorie" type="button" data-filter="gesundheit">
+          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+          <span class="kat-text"><strong>Gesundheit &amp; Energie</strong><span>Den eigenen Körper verstehen und Beschwerden in ihren Zusammenhang einordnen.</span></span>
+        </button>
+        <button class="kategorie" type="button" data-filter="persoenlichkeit">
+          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
+          <span class="kat-text"><strong>Persönlichkeit &amp; Identität</strong><span>Alte Rollen hinterfragen und herausfinden, was du in der nächsten Lebensphase wirklich willst.</span></span>
+        </button>
+        <button class="kategorie" type="button" data-filter="business">
+          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <span class="kat-text"><strong>Business &amp; Unternehmertum</strong><span>Unternehmerische Herausforderungen verstehen und dein Business so aufstellen, dass es zu deinem Leben passt.</span></span>
+        </button>
+        <button class="kategorie" type="button" data-filter="einblicke">
+          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+          <span class="kat-text"><strong>Einblicke &amp; Entwicklungen</strong><span>Was sich gerade in Gesundheit und Gesellschaft verändert und was mich persönlich beschäftigt.</span></span>
+        </button>
+      </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
+      <div class="liste-kopf">
+        <h2 id="liste-titel">Alle Artikel</h2>
+        <button class="alle" type="button" data-filter="alle" hidden>Alle Artikel zeigen</button>
+      </div>
       <ul class="artikel-liste">
-        <!-- ARTIKEL: neue Karten oben einfügen, Vorlage:
-        <li><a class="karte" href="/blog/SLUG/">
+        <!-- ARTIKEL: neue Karten oben einfügen, data-kategorie = gesundheit | persoenlichkeit | business | einblicke, Vorlage:
+        <li data-kategorie="KATEGORIE"><a class="karte" href="/blog/SLUG/">
           <p class="eyebrow">THEMA</p>
           <h2>TITEL</h2>
           <p>TEASER</p>
           <span class="mehr">Weiterlesen →</span>
         </a></li>
         -->
-        <li><a class="karte" href="/blog/chronisch-krank-2027/">
-          <p class="eyebrow">Regenerationsmedizin</p>
+        <li data-kategorie="gesundheit"><a class="karte" href="/blog/chronisch-krank-2027/">
+          <p class="eyebrow">Gesundheit &amp; Energie</p>
           <h2>Chronisch krank ab 2027? Was sich ändert und was du selbst tun kannst</h2>
           <p>Ab 2027 zahlst du in der Apotheke mehr und wartest beim Facharzt wahrscheinlich noch länger. Warum chronische Beschwerden oft einen gemeinsamen Ursprung haben und was du im Alltag selbst dagegen tun kannst.</p>
           <span class="mehr">Weiterlesen →</span>
         </a></li>
+        <li class="leer leer-filter" hidden>In diesem Thema gibt es noch keine Artikel. Die ersten erscheinen hier in den nächsten Wochen.</li>
       </ul>
     </div>
   </section>
@@ -66,5 +97,25 @@
     <span><a href="/">Startseite</a><a href="https://nicole-lurz.de/impressum/">Impressum</a><a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a></span>
   </div>
 </footer>
+<script>
+(function(){
+  var knoepfe=[].slice.call(document.querySelectorAll('[data-filter]'));
+  var karten=[].slice.call(document.querySelectorAll('.artikel-liste li[data-kategorie]'));
+  var leer=document.querySelector('.leer-filter'), titel=document.getElementById('liste-titel'), alle=document.querySelector('.alle');
+  function zeige(k){
+    var n=0;
+    karten.forEach(function(li){var an=(k==='alle'||li.dataset.kategorie===k); li.hidden=!an; if(an) n++;});
+    leer.hidden=n>0;
+    knoepfe.forEach(function(b){b.classList.toggle('aktiv',b.dataset.filter===k&&k!=='alle'); if(b.classList.contains('kategorie')) b.setAttribute('aria-pressed',b.dataset.filter===k);});
+    var akt=document.querySelector('.kategorie[data-filter="'+k+'"] strong');
+    titel.textContent=akt?akt.textContent:'Alle Artikel';
+    alle.hidden=(k==='alle');
+  }
+  knoepfe.forEach(function(b){b.addEventListener('click',function(){
+    var k=b.dataset.filter; if(b.classList.contains('aktiv')) k='alle'; zeige(k);
+    if(k!=='alle') titel.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+</script>
 </body>
 </html>

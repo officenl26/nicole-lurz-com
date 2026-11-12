@@ -13,6 +13,7 @@
   4. Inhaltsverzeichnis zweimal pflegen: in der Seitenleiste (.toc) und für Handys (.inhalt-mobil).
      Die Anker (#abschnitt-1 ...) müssen zu den id der h2 passen.
   5. Karte in blog/index.html oben in die Artikel-Liste setzen, Adresse in sitemap.xml und llms.txt eintragen.
+  "aktualisiert" in der Meta-Leiste bei jeder inhaltlichen Änderung neu setzen (auch dateModified im Schema).
   Kein Artikelbild, das Porträt steht in Autorzeile und Autorenkasten.
   Stil: Du-Form, Stil-Kanon gilt (keine Gedankenstriche, kein Fettdruck im Text). Praxis-Winkel: HWG-Check Pflicht.
   Quellen: nur geprüfte, wo möglich mit DOI-Link.
@@ -87,11 +88,14 @@
         <p class="brotkrumen"><a href="/blog/">Blog</a> <span>›</span> <a href="/blog/">[THEMA]</a> <span>›</span> <span class="hier">[KURZTITEL]</span></p>
         <p class="eyebrow">[THEMA]</p>
         <h1>[TITEL]</h1>
-        <div class="autor-zeile">
-          <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz" width="52" height="52">
-          <span><strong>Nicole Lurz</strong> <span class="punkt">·</span> Heilpraktikerin und Mentorin</span>
+        <div class="meta-leiste">
+          <a class="autor" href="#autorin"><img src="/images/nicole-portrait.jpg" alt="" width="40" height="40"><span>Nicole Lurz</span></a>
+          <time datetime="[JJJJ-MM-TT]">[TT. Monat JJJJ]</time>
+          <span class="leise">aktualisiert <time datetime="[JJJJ-MM-TT]">[TT. Monat JJJJ]</time></span>
+          <span class="pille">[X] Min. Lesezeit</span>
+          <button class="pille knopf" type="button" data-teilen><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span>Teilen</span></button>
+          <button class="pille knopf" type="button" data-pdf><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>PDF</span></button>
         </div>
-        <p class="artikel-meta"><time datetime="[JJJJ-MM-TT]">[TT. Monat JJJJ]</time> <span class="punkt">·</span> [X] Min. Lesezeit</p>
         <p class="teaser">[TEASER in zwei Sätzen, macht Lust aufs Weiterlesen. Gleicher Text wie auf der Karte in der Blog-Übersicht.]</p>
       </header>
 
@@ -133,7 +137,7 @@
         <details><summary>[FRAGE 2]</summary><p>[ANTWORT 2]</p></details>
       </section>
 
-      <aside class="autorin">
+      <aside class="autorin" id="autorin">
         <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz" loading="lazy">
         <div>
           <p><strong>Nicole Lurz</strong>Ich bin Heilpraktikerin, Diplom-Kauffrau und seit 2011 mit eigener Praxis in Wiesloch selbstständig. In dieser Zeit habe ich mehr als 1.500 Frauen begleitet und dabei immer wieder erlebt, dass einzelne Symptome erst einen Sinn ergeben, wenn man die Zusammenhänge dahinter versteht.</p>
@@ -201,6 +205,21 @@
     links.forEach(function(a,n){ a.classList.toggle('aktiv',n===i); });
   }
   window.addEventListener('scroll',aktiv,{passive:true}); aktiv();
+})();
+</script>
+<script>
+(function(){
+  var t=document.querySelector('[data-teilen]');
+  if(t) t.addEventListener('click',function(){
+    var d={title:document.title,url:location.href};
+    if(navigator.share){navigator.share(d).catch(function(){});return;}
+    var l=t.querySelector('span');
+    navigator.clipboard.writeText(location.href).then(function(){l.textContent='Link kopiert';setTimeout(function(){l.textContent='Teilen'},2000)});
+  });
+  function auf(){[].forEach.call(document.querySelectorAll('details'),function(d){d.open=true})}
+  window.addEventListener('beforeprint',auf);
+  var p=document.querySelector('[data-pdf]');
+  if(p) p.addEventListener('click',function(){auf();window.print()});
 })();
 </script>
 </body>
