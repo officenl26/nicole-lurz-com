@@ -4,13 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
-  ARTIKEL-VORLAGE für nicole-lurz.com/blog/
+  ARTIKEL-VORLAGE für nicole-lurz.com/blog/ (Layout seit 12.11.2026, Muster: blog/chronisch-krank-2027/)
   So wird ein neuer Artikel angelegt:
   1. Ordner blog/SLUG/ anlegen und diese Datei als index.html hineinkopieren.
   2. Alle [PLATZHALTER] ersetzen, die Zeile mit "noindex" löschen.
   3. Genau EINEN der beiden CTA-Blöcke behalten (Praxis ODER Mentoring), nie beide.
-  4. Karte in blog/index.html oben in die Artikel-Liste setzen, Adresse in sitemap.xml eintragen.
-  Stil: Du-Form, Stil-Kanon gilt. Praxis-Winkel: HWG-Check Pflicht.
+     Der kleine Kasten in der Seitenleiste zeigt auf dasselbe Ziel wie der CTA.
+  4. Inhaltsverzeichnis zweimal pflegen: in der Seitenleiste (.toc) und für Handys (.inhalt-mobil).
+     Die Anker (#abschnitt-1 ...) müssen zu den id der h2 passen.
+  5. Karte in blog/index.html oben in die Artikel-Liste setzen, Adresse in sitemap.xml und llms.txt eintragen.
+  Kein Artikelbild, das Porträt steht in Autorzeile und Autorenkasten.
+  Stil: Du-Form, Stil-Kanon gilt (keine Gedankenstriche, kein Fettdruck im Text). Praxis-Winkel: HWG-Check Pflicht.
+  Quellen: nur geprüfte, wo möglich mit DOI-Link.
 -->
 <meta name="robots" content="noindex">
 <title>[TITEL] · Nicole Lurz</title>
@@ -70,27 +75,37 @@
     <nav aria-label="Hauptmenü">
       <a class="weg" href="/#wegweiser">Angebote</a>
       <a class="weg" href="/#ueber">Über mich</a>
-      <a href="/blog/">Blog</a>
+      <a href="/blog/" aria-current="page">Blog</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <article class="wrap">
-    <div class="schmal">
+  <article class="wrap artikel-raster">
+    <div class="artikel-haupt">
       <header class="artikel-kopf">
-        <p class="brotkrumen"><a href="/">Startseite</a> / <a href="/blog/">Blog</a></p>
+        <p class="brotkrumen"><a href="/blog/">Blog</a> <span>›</span> <a href="/blog/">[THEMA]</a> <span>›</span> <span class="hier">[KURZTITEL]</span></p>
         <p class="eyebrow">[THEMA]</p>
         <h1>[TITEL]</h1>
-        <p class="artikel-meta">Von Nicole Lurz · <time datetime="[JJJJ-MM-TT]">[TT.MM.JJJJ]</time> · [X] Minuten Lesezeit</p>
+        <div class="autor-zeile">
+          <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz" width="52" height="52">
+          <span><strong>Nicole Lurz</strong> <span class="punkt">·</span> Heilpraktikerin und Mentorin</span>
+        </div>
+        <p class="artikel-meta"><time datetime="[JJJJ-MM-TT]">[TT. Monat JJJJ]</time> <span class="punkt">·</span> [X] Min. Lesezeit</p>
+        <p class="teaser">[TEASER in zwei Sätzen, macht Lust aufs Weiterlesen. Gleicher Text wie auf der Karte in der Blog-Übersicht.]</p>
       </header>
 
-      <div class="kurzantwort">
-        <p class="eyebrow">Kurz gesagt</p>
-        <p>[KURZANTWORT in zwei bis drei Sätzen, sachlich und klar. Diesen Absatz zitieren Google und KI-Suchen.]</p>
+      <div class="kurz">
+        <p class="eyebrow">Das Wichtigste in Kürze</p>
+        <ul>
+          <li>[KERNAUSSAGE 1, ein ganzer Satz. Diese Liste zitieren Google und KI-Suchen.]</li>
+          <li>[KERNAUSSAGE 2]</li>
+          <li>[KERNAUSSAGE 3]</li>
+          <li>[KERNAUSSAGE 4]</li>
+        </ul>
       </div>
 
-      <nav class="inhalt" aria-label="Inhalt">
+      <nav class="inhalt inhalt-mobil" aria-label="Inhalt">
         <strong>Inhalt</strong>
         <ol>
           <li><a href="#abschnitt-1">[ZWISCHENÜBERSCHRIFT 1]</a></li>
@@ -105,7 +120,7 @@
 
         <aside class="einblick">
           <p class="eyebrow">Aus meiner Praxis</p>
-          <p>[ECHTE, ANONYMISIERTE BEOBACHTUNG VON NICOLE, nichts erfinden]</p>
+          <p>[ECHTE, ANONYMISIERTE BEOBACHTUNG VON NICOLE, nichts erfinden. Name geändert dazuschreiben.]</p>
         </aside>
 
         <h2 id="abschnitt-2">[ZWISCHENÜBERSCHRIFT 2]</h2>
@@ -120,7 +135,13 @@
 
       <aside class="autorin">
         <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz" loading="lazy">
-        <p><strong>Nicole Lurz</strong>Heilpraktikerin mit eigener Praxis in Wiesloch seit 2011, Diplom-Kauffrau und Mentorin für Regenerative Medizin &amp; Chronische Gesundheit (Mojo-Institut).</p>
+        <div>
+          <p><strong>Nicole Lurz</strong>Ich bin Heilpraktikerin, Diplom-Kauffrau und seit 2011 mit eigener Praxis in Wiesloch selbstständig. In dieser Zeit habe ich mehr als 1.500 Frauen begleitet und dabei immer wieder erlebt, dass einzelne Symptome erst einen Sinn ergeben, wenn man die Zusammenhänge dahinter versteht.</p>
+          <p>Ob Gesundheit oder Unternehmertum, mich interessiert, was wirklich dahintersteckt. Wie die Dinge zusammenwirken und an welcher Stellschraube sich tatsächlich etwas verändert.</p>
+          <p>Am Mojo-Institut habe ich mich zur Mentorin für Regenerative Medizin und Chronische Gesundheit ausbilden lassen und dort auch als Fachmentorin gearbeitet. So kommen bei mir medizinisches Wissen und unternehmerisches Denken zusammen.</p>
+          <p>In diesem Blog schreibe ich über Gesundheit und Unternehmertum so, wie ich beides in meiner Arbeit jeden Tag erlebe.</p>
+          <p class="hinweis">Die gesundheitlichen Inhalte dieses Blogs dienen der Information und ersetzen keine individuelle medizinische Beratung oder ärztliche Untersuchung. Neue oder zunehmende Beschwerden sollten ärztlich abgeklärt werden.</p>
+        </div>
       </aside>
 
       <!-- CTA PRAXIS (für Artikel mit Praxis-Winkel) -->
@@ -134,9 +155,33 @@
       <aside class="cta">
         <h2>[CTA-ÜBERSCHRIFT] <em>[KURSIVER TEIL]</em></h2>
         <p>[CTA-TEXT]</p>
-        <a class="btn" href="https://nicole-lurz.de/selbsttest/">Zum Körper-Cockpit</a>
+        <a class="btn" href="https://nicole-lurz.de/strategie-call/">Orientierungsgespräch buchen</a>
       </aside>
+
+      <section class="quellen" id="quellen">
+        <h2>Quellen</h2>
+        <h3>[QUELLENGRUPPE]</h3>
+        <ul>
+          <li>[Autor, A. et al. (Jahr): <a href="https://doi.org/[DOI]">Titel</a>. Zeitschrift Band(Heft), Seiten.]</li>
+        </ul>
+      </section>
     </div>
+
+    <aside class="seitenleiste" aria-label="Inhalt">
+      <div class="leiste-innen">
+        <nav class="toc">
+          <p class="eyebrow">Inhalt</p>
+          <a href="#abschnitt-1">[ZWISCHENÜBERSCHRIFT 1]</a>
+          <a href="#abschnitt-2">[ZWISCHENÜBERSCHRIFT 2]</a>
+          <a href="#fragen">Häufige Fragen</a>
+          <a href="#quellen">Quellen</a>
+        </nav>
+        <div class="leiste-cta">
+          <p>[KURZE FRAGE AN DIE LESERIN, passend zum CTA]</p>
+          <a href="[GLEICHES ZIEL WIE DER CTA]">[BUTTONTEXT WIE IM CTA]</a>
+        </div>
+      </div>
+    </aside>
   </article>
 </main>
 
@@ -146,5 +191,17 @@
     <span><a href="/">Startseite</a><a href="https://nicole-lurz.de/impressum/">Impressum</a><a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a></span>
   </div>
 </footer>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  var ziele=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function aktiv(){
+    var y=window.scrollY+140, i=0;
+    ziele.forEach(function(z,n){ if(z && z.getBoundingClientRect().top+window.scrollY<=y) i=n; });
+    links.forEach(function(a,n){ a.classList.toggle('aktiv',n===i); });
+  }
+  window.addEventListener('scroll',aktiv,{passive:true}); aktiv();
+})();
+</script>
 </body>
 </html>
