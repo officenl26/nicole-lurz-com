@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ARTIKEL-VORLAGE für nicole-lurz.com/blog/
+  So wird ein neuer Artikel angelegt:
+  1. Ordner blog/SLUG/ anlegen und diese Datei als index.html hineinkopieren.
+  2. Alle [PLATZHALTER] ersetzen, die Zeile mit "noindex" löschen.
+  3. Genau EINEN der beiden CTA-Blöcke behalten (Praxis ODER Mentoring), nie beide.
+  4. Karte in blog/index.html oben in die Artikel-Liste setzen, Adresse in sitemap.xml eintragen.
+  Stil: Du-Form, Stil-Kanon gilt. Praxis-Winkel: HWG-Check Pflicht.
+-->
+<meta name="robots" content="noindex">
+<title>[TITEL] · Nicole Lurz</title>
+<meta name="description" content="[BESCHREIBUNG, 140-160 Zeichen]">
+<link rel="canonical" href="https://nicole-lurz.com/blog/[SLUG]/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nicole-lurz.com/blog/[SLUG]/">
+<meta property="og:title" content="[TITEL]">
+<meta property="og:description" content="[BESCHREIBUNG]">
+<meta property="og:image" content="https://nicole-lurz.com/images/nicole-hero.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/blog/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "[TITEL]",
+      "description": "[BESCHREIBUNG]",
+      "datePublished": "[JJJJ-MM-TT]",
+      "dateModified": "[JJJJ-MM-TT]",
+      "inLanguage": "de",
+      "mainEntityOfPage": "https://nicole-lurz.com/blog/[SLUG]/",
+      "image": "https://nicole-lurz.com/images/nicole-hero.jpg",
+      "author": {"@id": "https://nicole-lurz.com/#nicole"},
+      "publisher": {"@id": "https://nicole-lurz.com/#nicole"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nicole-lurz.com/#nicole",
+      "name": "Nicole Lurz",
+      "jobTitle": "Heilpraktikerin und Mentorin",
+      "url": "https://nicole-lurz.com/",
+      "image": "https://nicole-lurz.com/images/nicole-portrait.jpg",
+      "sameAs": ["https://naturheilpraxis-lurz.de/", "https://nicole-lurz.de/"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "[FRAGE 1]", "acceptedAnswer": {"@type": "Answer", "text": "[ANTWORT 1]"}},
+        {"@type": "Question", "name": "[FRAGE 2]", "acceptedAnswer": {"@type": "Answer", "text": "[ANTWORT 2]"}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="wrap">
+    <a class="wortmarke" href="/"><span class="lf">Nicole</span><span class="ll">Lurz</span></a>
+    <nav aria-label="Hauptmenü">
+      <a class="weg" href="/#wegweiser">Angebote</a>
+      <a class="weg" href="/#ueber">Über mich</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="schmal">
+      <header class="artikel-kopf">
+        <p class="brotkrumen"><a href="/">Startseite</a> / <a href="/blog/">Blog</a></p>
+        <p class="eyebrow">[THEMA]</p>
+        <h1>[TITEL]</h1>
+        <p class="artikel-meta">Von Nicole Lurz · <time datetime="[JJJJ-MM-TT]">[TT.MM.JJJJ]</time> · [X] Minuten Lesezeit</p>
+      </header>
+
+      <div class="kurzantwort">
+        <p class="eyebrow">Kurz gesagt</p>
+        <p>[KURZANTWORT in zwei bis drei Sätzen, sachlich und klar. Diesen Absatz zitieren Google und KI-Suchen.]</p>
+      </div>
+
+      <nav class="inhalt" aria-label="Inhalt">
+        <strong>Inhalt</strong>
+        <ol>
+          <li><a href="#abschnitt-1">[ZWISCHENÜBERSCHRIFT 1]</a></li>
+          <li><a href="#abschnitt-2">[ZWISCHENÜBERSCHRIFT 2]</a></li>
+          <li><a href="#fragen">Häufige Fragen</a></li>
+        </ol>
+      </nav>
+
+      <div class="text">
+        <h2 id="abschnitt-1">[ZWISCHENÜBERSCHRIFT 1]</h2>
+        <p>[TEXT]</p>
+
+        <aside class="einblick">
+          <p class="eyebrow">Aus meiner Praxis</p>
+          <p>[ECHTE, ANONYMISIERTE BEOBACHTUNG VON NICOLE, nichts erfinden]</p>
+        </aside>
+
+        <h2 id="abschnitt-2">[ZWISCHENÜBERSCHRIFT 2]</h2>
+        <p>[TEXT]</p>
+      </div>
+
+      <section class="faq" id="fragen">
+        <h2>Häufige Fragen</h2>
+        <details><summary>[FRAGE 1]</summary><p>[ANTWORT 1]</p></details>
+        <details><summary>[FRAGE 2]</summary><p>[ANTWORT 2]</p></details>
+      </section>
+
+      <aside class="autorin">
+        <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz" loading="lazy">
+        <p><strong>Nicole Lurz</strong>Heilpraktikerin mit eigener Praxis in Wiesloch seit 2011, Diplom-Kauffrau und Mentorin für Regenerative Medizin &amp; Chronische Gesundheit (Mojo-Institut).</p>
+      </aside>
+
+      <!-- CTA PRAXIS (für Artikel mit Praxis-Winkel) -->
+      <aside class="cta cta-praxis">
+        <h2>[CTA-ÜBERSCHRIFT] <em>[KURSIVER TEIL]</em></h2>
+        <p>[CTA-TEXT]</p>
+        <a class="btn" href="https://naturheilpraxis-lurz.de/">Check-in Gespräch vereinbaren</a>
+      </aside>
+
+      <!-- CTA MENTORING (für Artikel mit Mentoring-Winkel) -->
+      <aside class="cta">
+        <h2>[CTA-ÜBERSCHRIFT] <em>[KURSIVER TEIL]</em></h2>
+        <p>[CTA-TEXT]</p>
+        <a class="btn" href="https://nicole-lurz.de/selbsttest/">Zum Körper-Cockpit</a>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="fuss">
+  <div class="wrap">
+    <span>© 2026 Nicole Lurz · Wiesloch</span>
+    <span><a href="/">Startseite</a><a href="https://nicole-lurz.de/impressum/">Impressum</a><a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a></span>
+  </div>
+</footer>
+</body>
+</html>

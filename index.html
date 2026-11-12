@@ -3,12 +3,486 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Nicole Lurz</title>
-<link rel="canonical" href="https://nicole-lurz.de/">
-<meta http-equiv="refresh" content="0; url=https://nicole-lurz.de/">
-<script>location.replace('https://nicole-lurz.de/'+location.search);</script>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#FAF7F0;color:#1C1C1C;font:16px/1.5 Georgia,serif}a{color:inherit}</style>
+<title>Nicole Lurz · Heilpraktikerin und Mentorin</title>
+<meta name="description" content="Nicole Lurz, Heilpraktikerin und Mentorin. Naturheilpraxis in Wiesloch, Online-Mentoring für Unternehmerinnen ab 50 und Business-Mentoring für Heilberufe.">
+<link rel="canonical" href="https://nicole-lurz.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nicole-lurz.com/">
+<meta property="og:title" content="Nicole Lurz · Ich finde das Sandkorn im Getriebe.">
+<meta property="og:description" content="Naturheilpraxis in Wiesloch, Online-Mentoring für Unternehmerinnen ab 50 und Business-Mentoring für Heilberufe.">
+<meta property="og:image" content="https://nicole-lurz.com/images/nicole-hero.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+  /* Farben nur aus der DNA: design.md Online + Praxis-Website assets/style.css */
+  :root{
+    --tannenmoos:#0F1A14;
+    --karte:#131F18;
+    --dunkelgruen:#1F2D24;
+    --tiefste:#0A130E;
+    --seafoam:#7AA890;
+    --seafoam-hover:#95C0A8;
+    --salbei-hell:#A8BAB0;
+    --fliesstext-hell:#CDD9CF;
+    --fastweiss:#E8F0E8;
+    --papier:#F2F6F2;
+    --tinte:#1C1C1C;
+    --praxis-salbei:#7A8F4E;
+    --waldgruen:#3D5A2E;
+    --nachtblau:#0F2340;
+    --tiefblau:#1E3A5F;
+    --kupfer:#B85450;
+    --kupfer-hell:#D98A85;
+    --papier-warm:#FAF7F0;
+    --linie-dunkel:rgba(122,168,144,.16);
+    --linie-hell:rgba(61,90,46,.16);
+    --serif:"Spectral",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --breit:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--tannenmoos);color:var(--fliesstext-hell);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  em{font-family:var(--serif);font-style:italic;font-weight:400}
+  .wrap{max-width:var(--breit);margin:0 auto;padding:0 32px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+
+  /* ---------- NAV ---------- */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:20;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+  .nav.scrolled{background:rgba(15,26,20,.92);backdrop-filter:blur(10px);border-color:var(--linie-dunkel)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .wortmarke{font-family:var(--serif);font-size:23px;text-decoration:none;color:var(--fastweiss);letter-spacing:.01em}
+  .wortmarke .ll{font-style:italic;color:var(--seafoam);margin-left:.22em}
+  .nav ul{display:flex;gap:30px;list-style:none}
+  .nav ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--salbei-hell);transition:color .2s}
+  .nav ul a:hover{color:var(--fastweiss)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:150px 0 40px;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero .eyebrow{color:var(--seafoam);margin-bottom:28px}
+  .hero h1{font-family:var(--sans);font-weight:600;color:var(--fastweiss);font-size:clamp(40px,5.4vw,66px);line-height:1.08;letter-spacing:-.02em;margin-bottom:30px}
+  .hero h1 em{color:var(--seafoam);font-weight:400;letter-spacing:-.01em}
+  .hero .lead{font-size:19px;max-width:560px;margin-bottom:18px;color:var(--fliesstext-hell)}
+  .hero .lead + p{font-size:16px;max-width:540px;color:var(--salbei-hell)}
+  .hero-cta{display:inline-flex;align-items:center;gap:10px;margin-top:36px;font-weight:600;font-size:15px;letter-spacing:.02em;color:var(--fastweiss);text-decoration:none;border-bottom:1px solid var(--seafoam);padding-bottom:4px;transition:gap .2s}
+  .hero-cta:hover{gap:14px}
+  .hero h1{max-width:620px}
+  .hero .intro{font-size:20px;line-height:1.5;color:var(--fastweiss);max-width:560px;margin-bottom:18px}
+  /* Personal-Brand-Foto mit versetztem Rahmen */
+  .foto{position:relative;width:100%;max-width:430px;justify-self:end}
+  .foto::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(122,168,144,.4);border-radius:12px}
+  .foto img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:79% 0;border-radius:12px}
+  /* Wollknäuel, das sich zu einer klaren Linie entwirrt */
+  .entwirren{display:block;width:240px;height:44px;margin:30px 0 4px}
+  .entwirren path{fill:none;stroke:var(--seafoam);stroke-width:1.8;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:zeichnen 2.4s cubic-bezier(.45,.05,.3,1) .3s forwards}
+  @keyframes zeichnen{to{stroke-dashoffset:0}}
+
+  /* ---------- WEGWEISER ---------- */
+  .wegweiser{padding:70px 0 120px}
+  .wegweiser h2{font-weight:600;color:var(--fastweiss);font-size:clamp(30px,3.6vw,44px);line-height:1.15;letter-spacing:-.015em;margin-bottom:14px}
+  .wegweiser h2 em{color:var(--seafoam)}
+  .wegweiser .sub{color:var(--salbei-hell);max-width:560px;margin-bottom:48px}
+  .tueren{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tuer{position:relative;display:flex;flex-direction:column;background:var(--karte);border:1px solid var(--linie-dunkel);border-radius:10px;padding:34px 30px 30px;text-decoration:none;transition:transform .25s ease-out,border-color .25s,background .25s}
+  .tuer::before{content:"";position:absolute;left:30px;right:30px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+  .tuer:hover{transform:translateY(-4px);border-color:rgba(122,168,144,.35);background:var(--dunkelgruen)}
+  .tuer .eyebrow{color:var(--c-text);margin-bottom:22px}
+  .tuer blockquote{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.35;color:var(--fastweiss);margin-bottom:26px;flex:1}
+  .tuer .meta{font-size:14px;color:var(--salbei-hell);margin-bottom:22px}
+  .tuer .weiter{font-size:14px;font-weight:600;color:var(--fastweiss);display:flex;align-items:center;gap:8px;transition:gap .2s}
+  .tuer:hover .weiter{gap:12px}
+  .t-praxis{--c:var(--praxis-salbei);--c-text:#A8BAB0}
+  .t-online{--c:var(--seafoam);--c-text:var(--seafoam)}
+  .t-business{--c:var(--kupfer);--c-text:var(--kupfer-hell)}
+
+  /* ---------- RÄUME ---------- */
+  .raum{padding:120px 0}
+  .raum .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:start}
+  .raum .eyebrow{margin-bottom:22px}
+  .raum h2{font-weight:600;font-size:clamp(32px,3.9vw,48px);line-height:1.12;letter-spacing:-.018em;margin-bottom:30px}
+  .raum h2.lang{font-size:clamp(28px,3.2vw,40px)}
+  .raum p{margin-bottom:18px;max-width:600px}
+  .raum .zitat{margin-top:34px;padding-left:22px;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.45;max-width:560px}
+  .angebote{border-radius:10px;padding:34px 32px}
+  .angebote h3{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+  .angebot{padding:18px 0;border-top:1px solid}
+  .angebot:first-of-type{border-top:none;padding-top:4px}
+  .angebot strong{display:block;font-weight:600;font-size:17px;margin-bottom:3px}
+  .angebot span{font-size:15px;display:block}
+  .angebot .preis{margin-top:6px;font-weight:600;font-size:15px}
+  .ctas{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin-top:28px}
+  .btn{display:inline-block;padding:15px 26px;border-radius:6px;font-weight:600;font-size:15px;letter-spacing:.02em;text-decoration:none;transition:background .2s,transform .2s}
+  .btn:hover{transform:translateY(-1px)}
+  .leise{font-size:15px;font-weight:500;text-decoration:none;border-bottom:1px solid;padding-bottom:2px}
+  .hinweis{font-size:13px;margin-top:22px}
+
+  /* Praxis: hell, Sie-Form */
+  .r-praxis{background:var(--papier);color:var(--tinte)}
+  .r-praxis .eyebrow{color:var(--waldgruen)}
+  .r-praxis h2{color:var(--tinte)}
+  .r-praxis h2 em{color:var(--praxis-salbei)}
+  .r-praxis p{color:#2f3a31}
+  .r-praxis .zitat{border-left:2px solid var(--praxis-salbei);color:var(--waldgruen)}
+  .r-praxis .angebote{background:#fff;border:1px solid var(--linie-hell)}
+  .r-praxis .angebote h3{color:var(--waldgruen)}
+  .r-praxis .angebot{border-color:var(--linie-hell)}
+  .r-praxis .angebot span{color:#4a554c}
+  .r-praxis .angebot .preis{color:var(--waldgruen)}
+  .r-praxis .btn{background:var(--waldgruen);color:var(--papier)}
+  .r-praxis .btn:hover{background:var(--tannenmoos)}
+  .r-praxis .leise{color:var(--waldgruen)}
+  .r-praxis .hinweis{color:#5d685f}
+
+  /* Online-Mentoring: Tannenmoos, Du-Form */
+  .r-online{background:var(--tannenmoos);border-top:1px solid var(--linie-dunkel)}
+  .r-online .eyebrow{color:var(--seafoam)}
+  .r-online h2{color:var(--fastweiss)}
+  .r-online h2 em{color:var(--seafoam)}
+  .claimband{display:inline-block;margin-top:14px;padding:14px 20px;border:1px solid rgba(122,168,144,.35);border-radius:6px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--fastweiss)}
+  .r-online .angebote{background:var(--karte);border:1px solid var(--linie-dunkel)}
+  .r-online .angebote h3{color:var(--seafoam)}
+  .r-online .angebot{border-color:var(--linie-dunkel)}
+  .r-online .angebot strong{color:var(--fastweiss)}
+  .r-online .angebot span{color:var(--salbei-hell)}
+  .r-online .angebot .preis{color:var(--seafoam)}
+  .r-online .btn{background:var(--seafoam);color:var(--tannenmoos)}
+  .r-online .btn:hover{background:var(--seafoam-hover)}
+  .r-online .leise{color:var(--seafoam)}
+
+  /* Business-Mentoring: Nachtblau + Kupfer, Du-Form */
+  .r-business{background:radial-gradient(120% 90% at 0% 0%,var(--tiefblau) 0%,var(--nachtblau) 60%);color:var(--papier-warm)}
+  .r-business .eyebrow{color:var(--kupfer-hell)}
+  .r-business h2{color:var(--papier-warm)}
+  .r-business h2 em{color:var(--kupfer-hell)}
+  .r-business p{color:rgba(250,247,240,.82)}
+  .r-business .beleg{margin-top:28px;padding:20px 22px;border-left:3px solid var(--kupfer);background:rgba(250,247,240,.05);border-radius:0 6px 6px 0;font-size:16px;color:var(--papier-warm)}
+  .r-business .angebote{background:rgba(250,247,240,.04);border:1px solid rgba(250,247,240,.12)}
+  .r-business .angebote h3{color:var(--kupfer-hell)}
+  .r-business .angebot{border-color:rgba(250,247,240,.12)}
+  .r-business .angebot strong{color:var(--papier-warm)}
+  .r-business .angebot span{color:rgba(250,247,240,.72)}
+  .r-business .angebot .preis{color:var(--kupfer-hell)}
+  .r-business .btn{background:var(--kupfer);color:var(--papier-warm)}
+  .r-business .btn:hover{background:#9E4642}
+  .r-business .leise{color:var(--papier-warm)}
+
+  /* ---------- ÜBER MICH ---------- */
+  .ueber{background:var(--fastweiss);color:var(--tinte);padding:120px 0}
+  .ueber .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
+  .portrait{border-radius:10px;overflow:hidden;aspect-ratio:4/5;background:var(--dunkelgruen)}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+  .ueber .eyebrow{color:var(--waldgruen);margin-bottom:22px}
+  .ueber h2{font-weight:600;font-size:clamp(32px,3.9vw,46px);line-height:1.12;letter-spacing:-.018em;margin-bottom:28px}
+  .ueber h2 em{color:var(--waldgruen)}
+  .ueber p{margin-bottom:18px;color:#2f3a31;max-width:620px}
+  .zahlen{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:38px 0 26px;padding-top:30px;border-top:1px solid var(--linie-hell)}
+  .zahl strong{display:block;font-family:var(--serif);font-weight:500;font-size:36px;line-height:1;color:var(--waldgruen);margin-bottom:8px}
+  .zahl span{font-size:13px;line-height:1.4;color:#4a554c;display:block}
+  .pills{display:flex;flex-wrap:wrap;gap:10px}
+  .pills li{list-style:none;font-size:13px;font-weight:500;padding:8px 14px;border:1px solid var(--linie-hell);border-radius:40px;color:var(--waldgruen);background:var(--papier)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--tiefste);padding:80px 0 34px;color:var(--salbei-hell)}
+  .fuss{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  .fuss .claim{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--fastweiss);margin-top:14px;max-width:300px;line-height:1.4}
+  .fuss h4{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--fastweiss);margin-bottom:16px}
+  .fuss a{display:block;font-size:14px;text-decoration:none;margin-bottom:9px;transition:color .2s}
+  .fuss a:hover{color:var(--fastweiss)}
+  .fuss-unten{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--linie-dunkel);font-size:13px}
+  .fuss-unten a{text-decoration:none;margin-left:18px}
+  .fuss-unten a:hover{color:var(--fastweiss)}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease-out,transform .7s ease-out}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .entwirren path{animation:none;stroke-dashoffset:0}
+    .reveal{opacity:1;transform:none;transition:none}
+    .tuer,.btn,.hero-cta{transition:none}
+  }
+
+  /* ---------- MOBIL ---------- */
+  @media (max-width:960px){
+    .hero .wrap,.raum .wrap,.ueber .wrap{grid-template-columns:1fr;gap:48px}
+    .foto{max-width:300px;order:-1;justify-self:start}
+    .foto::before{inset:12px -12px -12px 12px}
+    .hero{padding-top:110px}
+    .tueren{grid-template-columns:1fr}
+    .fuss{grid-template-columns:1fr 1fr}
+    .zahlen{grid-template-columns:1fr 1fr}
+    .portrait{max-width:420px}
+    .nav ul li:not(.immer){display:none}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    body{font-size:16px}
+    .hero .lead{font-size:17px}
+    .hero .intro{font-size:18px}
+    .foto{max-width:230px}
+    .foto img{aspect-ratio:1/1;object-position:79% 10%}
+    .raum,.ueber{padding:84px 0}
+    .wegweiser{padding:50px 0 84px}
+    .angebote{padding:26px 22px}
+    .tuer{padding:30px 22px 24px}
+    .tuer::before{left:22px;right:22px}
+    .tuer blockquote{font-size:21px}
+    .fuss{grid-template-columns:1fr}
+    .fuss-unten a{margin:0 18px 0 0}
+  }
+</style>
 </head>
-<body><p>Weiter zu <a href="https://nicole-lurz.de/">nicole-lurz.de</a></p></body>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="wortmarke" href="#top"><span class="lf">Nicole</span><span class="ll">Lurz</span></a>
+    <ul>
+      <li><a href="#praxis">Praxis</a></li>
+      <li><a href="#online">Online-Mentoring</a></li>
+      <li><a href="#business">Business-Mentoring</a></li>
+      <li><a href="#ueber">Über mich</a></li>
+      <li class="immer"><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Nicole Lurz · Wiesloch und online</p>
+      <h1>Ich finde das <em>Sandkorn im Getriebe.</em></h1>
+      <p class="intro">Als Heilpraktikerin mit BWL-Hirn, Mentorin und Diplom-Kauffrau macht mich vor allem eine Sache aus. Ich erkenne Muster und setze den Fokus auf das, was jetzt wichtig ist.</p>
+      <p class="lead">Ob es um einen Körper geht oder um ein Business, oft hat sich im Kopf alles zu einem Wollknäuel verheddert, und irgendwo steckt das eine Sandkorn, das alles ausbremst. Ich entwirre das Knäuel, bis klar ist, wo es hakt und wo man anfangen kann.</p>
+      <!-- Wollknäuel, das sich zu einer klaren Linie entwirrt -->
+      <svg class="entwirren" viewBox="0 0 240 44" aria-hidden="true">
+        <path pathLength="1" d="M4 30 C14 4 40 4 36 24 C32 42 12 34 20 18 C28 4 56 8 52 28 C48 44 30 36 40 20 C50 6 74 12 70 26 C66 38 54 30 64 22 C76 14 90 22 104 22 L236 22"/>
+      </svg>
+      <a class="hero-cta" href="#wegweiser">Wo darf ich hinschauen? <span aria-hidden="true">↓</span></a>
+    </div>
+
+    <figure class="foto">
+      <img src="/images/nicole-hero.jpg" alt="Nicole Lurz, Heilpraktikerin und Mentorin">
+    </figure>
+  </div>
+</header>
+
+<section class="wegweiser" id="wegweiser">
+  <div class="wrap">
+    <h2 class="reveal">Wo darf ich <em>hinschauen?</em></h2>
+    <p class="sub reveal">Jeder Bereich hat seine eigene Website. Der Satz, der am ehesten passt, führt weiter.</p>
+
+    <div class="tueren">
+      <a class="tuer t-praxis reveal" href="#praxis">
+        <p class="eyebrow">Naturheilpraxis · Wiesloch</p>
+        <blockquote>„Ich habe Beschwerden, die mir bisher keiner richtig erklären konnte, und suche eine Praxis in der Nähe von Heidelberg."</blockquote>
+        <p class="meta">Vor Ort in Wiesloch, für Erwachsene und Kinder</p>
+        <span class="weiter">Zur Praxis <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="tuer t-online reveal d1" href="#online">
+        <p class="eyebrow">Online-Mentoring · ab 50</p>
+        <blockquote>„Mein Business habe ich im Griff. Nur meinen Körper nicht mehr."</blockquote>
+        <p class="meta">Online, für Unternehmerinnen in der Lebensmitte</p>
+        <span class="weiter">Zum Mentoring <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="tuer t-business reveal d2" href="#business">
+        <p class="eyebrow">Business-Mentoring · Heilberufe</p>
+        <blockquote>„Ich bin gut in meinem Beruf und längst online gestartet, aber mein Business kommt seit Monaten nicht vom Fleck."</blockquote>
+        <p class="meta">Für Heilpraktiker, Therapeuten, Ärzte und Coaches</p>
+        <span class="weiter">Zum Business-Mentoring <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RAUM 1 · PRAXIS (Sie-Form) -->
+<section class="raum r-praxis" id="praxis">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow reveal">01 · Naturheilpraxis Nicole Lurz · Wiesloch</p>
+      <h2 class="reveal">Viele Befunde, aber <em>keine Antwort?</em></h2>
+      <p class="reveal">Viele kommen mit einer dicken Mappe voller Befunde zu mir und haben trotzdem noch niemanden gefunden, der ihnen sagt, was eigentlich los ist. Ich frage nicht nur: Wo tut es weh? Ich frage: Warum kommt Ihr Körper da von allein nicht mehr heraus? Und was braucht er ganz konkret, um wieder in Richtung Gesundheit zu finden?</p>
+      <p class="reveal">Statt zehn Baustellen gleichzeitig anzugehen, suche ich die zwei oder drei Dinge, die bei Ihnen wirklich etwas verändern.</p>
+      <p class="zitat reveal">„Ich gebe Ihnen keinen Plan, den Sie blind abarbeiten. Ich möchte, dass Sie selbst gute Entscheidungen für Ihren Körper treffen können. Das Lenkrad halten Sie."</p>
+    </div>
+    <div class="angebote reveal d1">
+      <h3>In der Praxis</h3>
+      <div class="angebot">
+        <strong>Check-in Gespräch</strong>
+        <span>Der Einstieg, um sich kennenzulernen und den ersten Schritt zu klären.</span>
+        <span class="preis">30 Minuten · 75 €</span>
+      </div>
+      <div class="angebot">
+        <strong>Regenerationsanalyse</strong>
+        <span>Zwei Termine à 60 Minuten plus Auswertung.</span>
+        <span class="preis">450 €</span>
+      </div>
+      <div class="angebot">
+        <strong>Bioresonanz und Kinderheilkunde</strong>
+        <span>Weitere Schwerpunkte der Praxis, Details auf der Praxis-Website.</span>
+      </div>
+      <div class="ctas">
+        <a class="btn" href="https://naturheilpraxis-lurz.de/">Zur Praxis-Website</a>
+        <a class="leise" href="https://naturheilpraxis-lurz.de/termin-ablauf/">So läuft ein Termin ab</a>
+      </div>
+      <p class="hinweis">Termine vor Ort in Wiesloch bei Heidelberg, Buchung über Lemniscus.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RAUM 2 · ONLINE-MENTORING (Du-Form) -->
+<section class="raum r-online" id="online">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow reveal">02 · Online-Mentoring · für Unternehmerinnen ab 50</p>
+      <h2 class="reveal">Du führst dein Business. Aber gerade führt <em>dein Körper dich.</em></h2>
+      <p class="reveal">Nachts um drei liegst du wach. Blutwerte, Bücher und gut gemeinte Tipps hast du längst gesammelt, und trotzdem fehlt dir der Zusammenhang. Du willst klare Antworten und einfache Schritte, ohne weiter selbst ausprobieren zu müssen, was vielleicht hilft.</p>
+      <p class="reveal">Ich helfe erfolgreichen Unternehmerinnen in der Lebensmitte zu verstehen, warum sich ihr Körper verändert. Und wie sie Klarheit und Kontrolle über Energie, Gewicht und Leistungsfähigkeit zurückgewinnen.</p>
+      <p class="claimband reveal">Leadership beginnt im eigenen Körper.</p>
+    </div>
+    <div class="angebote reveal d1">
+      <h3>Im Mentoring</h3>
+      <div class="angebot">
+        <strong>Körper-Cockpit</strong>
+        <span>Der Selbsttest mit 12 Fragen. Nach drei Minuten siehst du, wo es bei dir gerade hakt.</span>
+        <span class="preis">kostenlos</span>
+      </div>
+      <div class="angebot">
+        <strong>Strategie-Call</strong>
+        <span>30 Minuten, in denen ich mir ein erstes Bild von deiner Situation mache und wir gemeinsam klären, was für dich der nächste Schritt ist.</span>
+        <span class="preis">kostenfrei</span>
+      </div>
+      <div class="angebot">
+        <strong>Blind Spot Check</strong>
+        <span>Das 90-minütige Befundgespräch mit deinem 12-Wochen-Protokoll, einem Check-in nach 14 Tagen und WhatsApp-Support. Den Termin vereinbaren wir im Strategie-Call.</span>
+        <span class="preis">530 €</span>
+      </div>
+      <div class="angebot">
+        <strong>The Inner Shift</strong>
+        <span>Begleitung 1:1 oder im kleinen Kreis, der Einstieg läuft über den Strategie-Call.</span>
+      </div>
+      <div class="ctas">
+        <a class="btn" href="https://nicole-lurz.de/selbsttest/">Zum Körper-Cockpit</a>
+        <a class="leise" href="https://nicole-lurz.de/strategie-call/">Strategie-Call buchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RAUM 3 · BUSINESS-MENTORING (Du-Form) -->
+<section class="raum r-business" id="business">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow reveal">03 · Business-Mentoring · für Heilberufe</p>
+      <h2 class="lang reveal">Du liebst, was du tust. Aber passt die Art, wie du heute arbeitest, <em>noch zu dem Leben, das du führen möchtest?</em></h2>
+      <p class="reveal">Du bist längst gestartet, postest regelmäßig und hast deine Angebote, und trotzdem wächst die Liste kaum und die Anfragen bleiben aus. Mehr Wissen brauchst du dafür meistens nicht. Ich schaue von außen auf das, was an Erfahrung und bisherigen Versuchen schon da ist, und finde den Punkt, an dem du dich gerade im Kreis drehst.</p>
+      <p class="beleg reveal">In den letzten zweieinhalb Jahren habe ich mehr als 800 Ärzte, Therapeuten, Heilpraktiker und Coaches in ihrem Business begleitet.</p>
+    </div>
+    <div class="angebote reveal d1">
+      <h3>Im Business-Mentoring</h3>
+      <div class="angebot">
+        <strong>Business Blind Spot Check</strong>
+        <span>Reflexionsbogen und Vorab-Analyse, 90 Minuten 1:1, danach 14 Tage WhatsApp-Support. Wenige Plätze pro Monat, nach Bewerbung.</span>
+        <span class="preis">Startpreis 490 € inkl. MwSt bis 31.12.2026, danach 625 €</span>
+      </div>
+      <div class="angebot">
+        <strong>Business &amp; Life Blueprint 2027</strong>
+        <span>Vier Live-Termine online in einer exklusiven kleinen Gruppe mit 5-10 Frauen, Start am 18.12.2026.</span>
+      </div>
+      <div class="angebot">
+        <strong>The Strategy Shift · Praxis ohne Wartezimmer</strong>
+        <span>Individuelle Begleitung nach Bewerbung.</span>
+      </div>
+      <div class="ctas">
+        <a class="btn" href="https://tidycal.com/nicole-lurz/bbsc">Kennenlerngespräch buchen</a>
+        <a class="leise" href="/blueprint-2027/">Zum Blueprint 2027</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER MICH (Ich-Form, ohne Anrede) -->
+<section class="ueber" id="ueber">
+  <div class="wrap">
+    <div class="portrait reveal">
+      <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow reveal">Über mich</p>
+      <h2 class="reveal">Warum das bei mir <em>zusammengehört</em></h2>
+      <p class="reveal">Ärztin wollte ich schon in der Schule werden. Geworden bin ich erst einmal Diplom-Kauffrau, und ich habe 20 Jahre in der Wirtschaft gearbeitet, unter anderem in der Unternehmensberatung und später selbstständig als Finanzmaklerin.</p>
+      <p class="reveal">Ein chronisches Schulter-Arm-Syndrom hat mich damals zur Naturheilkunde gebracht, und seit 2011 bin ich Heilpraktikerin mit eigener Praxis in Wiesloch. Heute merke ich jeden Tag, wie sehr mir beides hilft. In der Wirtschaft habe ich gelernt, in einem Durcheinander den Engpass zu finden, und aus der Praxis weiß ich, wie Körper, Befunde und Alltag zusammenhängen.</p>
+      <p class="reveal">Ob es um einen Körper geht oder um ein Business, ich schaue so lange hin, bis ich das Sandkorn gefunden habe, an dem es hakt.</p>
+      <div class="zahlen reveal">
+        <div class="zahl"><strong>14+</strong><span>Jahre eigene Heilpraxis</span></div>
+        <div class="zahl"><strong>20</strong><span>Jahre in der Wirtschaft</span></div>
+        <div class="zahl"><strong>1.500+</strong><span>Klientinnen begleitet</span></div>
+        <div class="zahl"><strong>800+</strong><span>Heilberufler im Business begleitet</span></div>
+      </div>
+      <ul class="pills reveal">
+        <li>Diplom-Kauffrau</li>
+        <li>Heilpraktikerin</li>
+        <li>Mentorin für Regenerative Medizin &amp; Chronische Gesundheit (Mojo-Institut)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fuss">
+      <div>
+        <a class="wortmarke" href="#top"><span class="lf">Nicole</span><span class="ll">Lurz</span></a>
+        <p class="claim">Ich finde das Sandkorn im Getriebe.</p>
+      </div>
+      <div>
+        <h4>Praxis</h4>
+        <a href="https://naturheilpraxis-lurz.de/">naturheilpraxis-lurz.de</a>
+        <a href="https://naturheilpraxis-lurz.de/termin-ablauf/">Termin-Ablauf</a>
+      </div>
+      <div>
+        <h4>Online-Mentoring</h4>
+        <a href="https://nicole-lurz.de/">nicole-lurz.de</a>
+        <a href="https://nicole-lurz.de/selbsttest/">Körper-Cockpit</a>
+        <a href="https://nicole-lurz.de/strategie-call/">Strategie-Call</a>
+      </div>
+      <div>
+        <h4>Business-Mentoring</h4>
+        <a href="https://tidycal.com/nicole-lurz/bbsc">Kennenlerngespräch</a>
+        <a href="/blueprint-2027/">Blueprint 2027</a>
+        <a href="mailto:office@nicole-lurz.com">office@nicole-lurz.com</a>
+      </div>
+    </div>
+    <div class="fuss-unten">
+      <span>© <span id="jahr">2026</span> Nicole Lurz · Wiesloch</span>
+      <span>
+        <a href="/blog/">Blog</a>
+        <a href="https://nicole-lurz.de/impressum/">Impressum</a>
+        <a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
 </html>
