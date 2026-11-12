@@ -193,3 +193,54 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
 .kopf ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--salbei-hell);transition:color .2s}
 .kopf ul a:hover,.kopf ul a[aria-current]{color:var(--fastweiss)}
 @media (max-width:960px){.kopf ul li:not(.immer){display:none}}
+
+/* Blog-Übersicht aufgewertet (12.11.2026) */
+.kopf ul,.kopf nav ul{margin:0;padding:0}
+.hero-raster{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:72px;align-items:center}
+.blog-hero{padding:80px 0 72px}
+.blog-hero .hero-text p{max-width:600px}
+.hero-bild{position:relative;margin:0}
+.hero-bild img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:18px;box-shadow:0 24px 60px -30px rgba(15,26,20,.45)}
+.hero-bild figcaption{position:absolute;left:-28px;bottom:28px;max-width:250px;background:#fff;border:1px solid var(--linie);border-radius:12px;padding:14px 18px;font-size:14px;line-height:1.45;color:var(--text);box-shadow:0 14px 34px -18px rgba(15,26,20,.35)}
+.hero-bild figcaption strong{display:block;color:var(--tinte);font-size:15px}
+.band{background:var(--fastweiss);padding:56px 0 64px;margin-bottom:64px}
+.band .kat-raster{gap:16px;border-top:0}
+.band .kategorie{background:#fff;border:1px solid var(--linie);border-radius:14px;padding:22px}
+.band .kategorie:hover{border-color:rgba(61,90,46,.35);background:#fff;transform:translateY(-2px)}
+.band .kategorie.aktiv{border-color:var(--waldgruen);box-shadow:0 0 0 1px var(--waldgruen)}
+.kategorie{transition:transform .2s,border-color .2s,background .2s}
+/* Neuester Artikel groß und dunkel */
+.artikel-liste li:first-child:not([hidden]){grid-column:1/-1}
+.artikel-liste li:first-child .karte{background:var(--tannenmoos);border-color:var(--tannenmoos);color:var(--fastweiss);padding:44px 48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px 56px;align-items:end}
+.artikel-liste li:first-child .karte .eyebrow{color:var(--seafoam);grid-column:1/-1}
+.artikel-liste li:first-child .karte h2{font-size:clamp(26px,3vw,36px);line-height:1.15;color:var(--fastweiss);margin:0}
+.artikel-liste li:first-child .karte p:not(.eyebrow){color:var(--salbei-hell);font-size:17px}
+.artikel-liste li:first-child .karte .mehr{color:var(--seafoam);grid-column:2}
+.artikel-liste li:first-child .karte::before{content:"Neu im Blog";grid-column:1/-1;justify-self:start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tannenmoos);background:var(--seafoam);padding:5px 10px;border-radius:999px;margin-bottom:10px}
+.artikel-liste{padding-bottom:88px}
+/* Autorin-Band */
+.autorin-band{background:var(--tannenmoos);padding:64px 0}
+.autorin-band .wrap{display:grid;grid-template-columns:140px minmax(0,1fr);gap:40px;align-items:center;max-width:960px}
+.autorin-band img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid rgba(122,168,144,.4)}
+.autorin-band .eyebrow{color:var(--seafoam);margin-bottom:10px}
+.autorin-band p:not(.eyebrow){color:var(--fastweiss);font-size:19px;line-height:1.6;margin-bottom:16px}
+.autorin-band a{color:var(--seafoam);font-weight:600;font-size:15px}
+@media (max-width:900px){
+  .hero-raster{grid-template-columns:1fr;gap:40px}
+  .hero-bild{max-width:420px}
+  .hero-bild figcaption{left:16px}
+  .artikel-liste li:first-child .karte{grid-template-columns:1fr;padding:32px 28px}
+  .artikel-liste li:first-child .karte .mehr{grid-column:1}
+}
+@media (max-width:560px){
+  .blog-hero{padding:48px 0 48px}
+  .band{padding:40px 0 44px;margin-bottom:44px}
+  .autorin-band .wrap{grid-template-columns:1fr;gap:20px}
+  .autorin-band img{width:96px;height:96px}
+  .autorin-band p:not(.eyebrow){font-size:17px}
+}
+.hero-raster{grid-template-columns:minmax(0,1.5fr) minmax(0,.75fr);align-items:start}
+.hero-bild{max-width:380px;justify-self:end;margin-top:8px}
+.hero-bild img{aspect-ratio:5/6}
+@media (max-width:900px){.hero-bild{justify-self:start;max-width:340px}}
+@media (max-width:900px){.hero-raster{grid-template-columns:1fr;gap:36px}.hero-bild{justify-self:start;max-width:320px}}
