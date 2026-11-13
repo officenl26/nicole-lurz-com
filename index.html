@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nicole Lurz · Heilpraktikerin, Gesundheits- und Business-Mentorin</title>
-<meta name="description" content="Nicole Lurz, Heilpraktikerin, Gesundheits- und Business-Mentorin. Naturheilpraxis in Wiesloch, Online-Mentoring für Unternehmerinnen ab 50 und Business-Mentoring für Heilberufe.">
+<meta name="description" content="Nicole Lurz, Heilpraktikerin, Gesundheits- und Business-Mentorin. Naturheilpraxis in Wiesloch, Gesundheits-Mentoring für Unternehmerinnen ab 50 und Business-Mentoring für Heilberufe und Coaches.">
 <link rel="canonical" href="https://nicole-lurz.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nicole-lurz.com/">
 <meta property="og:title" content="Nicole Lurz · Ich finde das Sandkorn im Getriebe.">
-<meta property="og:description" content="Naturheilpraxis in Wiesloch, Online-Mentoring für Unternehmerinnen ab 50 und Business-Mentoring für Heilberufe.">
+<meta property="og:description" content="Naturheilpraxis in Wiesloch, Gesundheits-Mentoring für Unternehmerinnen ab 50 und Business-Mentoring für Heilberufe und Coaches.">
 <meta property="og:image" content="https://nicole-lurz.com/images/nicole-hero.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
@@ -120,6 +120,47 @@
   .btn:hover{transform:translateY(-1px)}
   .leise{font-size:15px;font-weight:500;text-decoration:none;border-bottom:1px solid;padding-bottom:2px}
   .hinweis{font-size:13px;margin-top:22px}
+  .angebote .einstieg{font-family:var(--serif);font-size:26px;line-height:1.2;margin-bottom:10px}
+  .angebote .was{font-size:16px;margin-bottom:4px}
+  .aktuell{margin-top:22px;border-radius:10px;padding:26px 28px;background:rgba(184,84,80,.14);border:1px solid rgba(217,138,133,.45)}
+  .aktuell .marke{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tiefste);background:var(--kupfer-hell);padding:5px 10px;border-radius:30px;margin-bottom:14px}
+  .aktuell strong{display:block;font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.25;color:var(--papier-warm);margin-bottom:8px}
+  .aktuell p{font-size:15px;margin-bottom:14px;color:rgba(250,247,240,.82)}
+  .aktuell .start{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--kupfer-hell);margin-bottom:14px}
+  .stimme{margin:-6px 0 30px;padding:2px 0 2px 20px;max-width:560px}
+  .stimme q{display:block;quotes:none;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.45}
+  .stimme cite{display:block;margin-top:10px;font-style:normal;font-size:13px;font-weight:600;letter-spacing:.04em}
+  .r-praxis .stimme{border-left:2px solid var(--praxis-salbei)}
+  .r-praxis .stimme q{color:var(--tinte)}
+  .r-praxis .stimme cite{color:var(--waldgruen)}
+  .r-online .stimme{border-left:2px solid var(--seafoam)}
+  .r-online .stimme q{color:var(--fastweiss)}
+  .r-online .stimme cite{color:var(--seafoam)}
+  .hero-stimme{border-left:2px solid var(--seafoam);margin:26px 0 0}
+  .hero-stimme q{color:var(--fliesstext-hell);font-size:18px}
+  .hero-stimme cite{color:var(--seafoam)}
+  .r-business .stimme{border-left:2px solid var(--kupfer)}
+  .r-business .stimme q{color:var(--papier-warm)}
+  .r-business .stimme cite{color:var(--kupfer-hell)}
+  /* SW-Foto randlos mit weichem Übergang (wie nicole-lurz.de) */
+  .hero{min-height:min(820px,100vh)}
+  .hero .wrap{display:block;position:relative;z-index:2}
+  .hero .wrap>div{max-width:600px}
+  .hero-bleed{position:absolute;top:56px;right:0;bottom:0;width:54%;z-index:1;pointer-events:none;margin:0}
+  .hero-bleed img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;filter:contrast(1.02) brightness(1.04);
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 18%,rgba(0,0,0,.65) 40%,black 60%);
+    mask-image:linear-gradient(90deg,transparent 0%,transparent 18%,rgba(0,0,0,.65) 40%,black 60%)}
+  .hero-bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--tannenmoos) 0%,transparent 24%),linear-gradient(180deg,var(--tannenmoos) 0%,transparent 14%)}
+  @media (max-width:1100px) and (min-width:961px){.hero .wrap>div{max-width:500px}}
+  @media (max-width:960px){
+    .hero{min-height:0;padding-top:72px}
+    .hero-bleed{position:relative;top:0;width:100%;height:auto}
+    .hero-bleed img{height:auto;aspect-ratio:4/3;object-position:50% 22%;
+      -webkit-mask-image:linear-gradient(0deg,transparent 0%,black 30%,black 100%);
+      mask-image:linear-gradient(0deg,transparent 0%,black 30%,black 100%)}
+    .hero-bleed::after{background:linear-gradient(180deg,var(--tannenmoos) 0%,transparent 16%)}
+    .hero .wrap{margin-top:-8px}
+  }
 
   /* Praxis: hell, Sie-Form */
   .r-praxis{background:var(--papier);color:var(--tinte)}
@@ -130,6 +171,8 @@
   .r-praxis .zitat{border-left:2px solid var(--praxis-salbei);color:var(--waldgruen)}
   .r-praxis .angebote{background:#fff;border:1px solid var(--linie-hell)}
   .r-praxis .angebote h3{color:var(--waldgruen)}
+  .r-praxis .einstieg{color:var(--tinte)}
+  .r-praxis .was{color:#2f3a31}
   .r-praxis .angebot{border-color:var(--linie-hell)}
   .r-praxis .angebot span{color:#4a554c}
   .r-praxis .angebot .preis{color:var(--waldgruen)}
@@ -146,6 +189,8 @@
   .claimband{display:inline-block;margin-top:14px;padding:14px 20px;border:1px solid rgba(122,168,144,.35);border-radius:6px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--fastweiss)}
   .r-online .angebote{background:var(--karte);border:1px solid var(--linie-dunkel)}
   .r-online .angebote h3{color:var(--seafoam)}
+  .r-online .einstieg{color:var(--fastweiss)}
+  .r-online .was{color:var(--fliesstext-hell)}
   .r-online .angebot{border-color:var(--linie-dunkel)}
   .r-online .angebot strong{color:var(--fastweiss)}
   .r-online .angebot span{color:var(--salbei-hell)}
@@ -163,6 +208,8 @@
   .r-business .beleg{margin-top:28px;padding:20px 22px;border-left:3px solid var(--kupfer);background:rgba(250,247,240,.05);border-radius:0 6px 6px 0;font-size:16px;color:var(--papier-warm)}
   .r-business .angebote{background:rgba(250,247,240,.04);border:1px solid rgba(250,247,240,.12)}
   .r-business .angebote h3{color:var(--kupfer-hell)}
+  .r-business .einstieg{color:var(--papier-warm)}
+  .r-business .was{color:rgba(250,247,240,.82)}
   .r-business .angebot{border-color:rgba(250,247,240,.12)}
   .r-business .angebot strong{color:var(--papier-warm)}
   .r-business .angebot span{color:rgba(250,247,240,.72)}
@@ -219,10 +266,14 @@
     .fuss{grid-template-columns:1fr 1fr}
     .zahlen{grid-template-columns:1fr 1fr}
     .portrait{max-width:420px}
-    .nav ul li:not(.immer){display:none}
+    .nav ul li.breit{display:none}
+    .nav ul{gap:18px}
   }
   @media (max-width:560px){
     .wrap{padding:0 16px}
+    .nav ul{gap:12px}
+    .nav ul a{font-size:13px}
+    .wortmarke{font-size:20px}
     body{font-size:16px}
     .hero .lead{font-size:17px}
     .hero .intro{font-size:18px}
@@ -246,21 +297,26 @@
     <a class="wortmarke" href="#top"><span class="lf">Nicole</span><span class="ll">Lurz</span></a>
     <ul>
       <li><a href="#praxis">Praxis</a></li>
-      <li><a href="#online">Online-Mentoring</a></li>
-      <li><a href="#business">Business-Mentoring</a></li>
-      <li><a href="#ueber">Über mich</a></li>
-      <li class="immer"><a href="/blog/">Blog</a></li>
+      <li><a href="#online">Gesundheit</a></li>
+      <li><a href="#business">Business</a></li>
+      <li class="breit"><a href="#ueber">Über mich</a></li>
+      <li><a href="/blog/">Blog</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero" id="top">
+  <figure class="hero-bleed"><img src="/images/nicole-sw.jpg" alt="Nicole Lurz, Heilpraktikerin, Gesundheits- und Business-Mentorin" fetchpriority="high"></figure>
   <div class="wrap">
     <div>
       <p class="eyebrow">Nicole Lurz · Wiesloch und online</p>
       <h1>Ich finde das <em>Sandkorn im Getriebe.</em></h1>
       <p class="intro">Als Heilpraktikerin mit BWL-Hirn, Mentorin und Diplom-Kauffrau macht mich vor allem eine Sache aus. Ich erkenne Muster und setze den Fokus auf das, was jetzt wichtig ist.</p>
       <p class="lead">Ob es um einen Körper geht oder um ein Business, oft hat sich im Kopf alles zu einem Wollknäuel verheddert, und irgendwo steckt das eine Sandkorn, das alles ausbremst. Ich entwirre das Knäuel, bis klar ist, wo es hakt und wo man anfangen kann.</p>
+      <blockquote class="stimme hero-stimme">
+        <q>„Die Zusammenarbeit mit Nicole war transformierend. Ihre einfühlsame und professionelle Art hat mir geholfen, alte Muster zu lösen und meinen Fokus zu stärken. Ich habe wertvolle Werkzeuge und Techniken erlernt, die mir im Alltag und beruflich nachhaltig weiterhelfen.“</q>
+        <cite>Imke, Leitende Angestellte · Bewertung auf ProvenExpert</cite>
+      </blockquote>
       <!-- Wollknäuel, das sich zu einer klaren Linie entwirrt -->
       <svg class="entwirren" viewBox="0 0 240 44" aria-hidden="true">
         <path pathLength="1" d="M4 30 C14 4 40 4 36 24 C32 42 12 34 20 18 C28 4 56 8 52 28 C48 44 30 36 40 20 C50 6 74 12 70 26 C66 38 54 30 64 22 C76 14 90 22 104 22 L236 22"/>
@@ -268,9 +324,6 @@
       <a class="hero-cta" href="#wegweiser">Wo darf ich hinschauen? <span aria-hidden="true">↓</span></a>
     </div>
 
-    <figure class="foto">
-      <img src="/images/nicole-hero.jpg" alt="Nicole Lurz, Heilpraktikerin, Gesundheits- und Business-Mentorin">
-    </figure>
   </div>
 </header>
 
@@ -282,19 +335,19 @@
     <div class="tueren">
       <a class="tuer t-praxis reveal" href="#praxis">
         <p class="eyebrow">Naturheilpraxis · Wiesloch</p>
-        <blockquote>„Ich habe Beschwerden, die mir bisher keiner richtig erklären konnte, und suche eine Praxis in der Nähe von Heidelberg."</blockquote>
+        <blockquote>„Ich habe Beschwerden, die mir bisher keiner richtig erklären konnte, und suche eine Praxis in der Nähe von Heidelberg.“</blockquote>
         <p class="meta">Vor Ort in Wiesloch, für Erwachsene und Kinder</p>
         <span class="weiter">Zur Praxis <span aria-hidden="true">→</span></span>
       </a>
       <a class="tuer t-online reveal d1" href="#online">
-        <p class="eyebrow">Online-Mentoring · ab 50</p>
-        <blockquote>„Mein Business habe ich im Griff. Nur meinen Körper nicht mehr."</blockquote>
+        <p class="eyebrow">Gesundheit · online, ab 50</p>
+        <blockquote>„Mein Business habe ich im Griff. Nur meinen Körper nicht mehr.“</blockquote>
         <p class="meta">Online, für Unternehmerinnen in der Lebensmitte</p>
-        <span class="weiter">Zum Mentoring <span aria-hidden="true">→</span></span>
+        <span class="weiter">Zum Gesundheits-Mentoring <span aria-hidden="true">→</span></span>
       </a>
       <a class="tuer t-business reveal d2" href="#business">
-        <p class="eyebrow">Business-Mentoring · Heilberufe</p>
-        <blockquote>„Ich bin gut in meinem Beruf und längst online gestartet, aber mein Business kommt seit Monaten nicht vom Fleck."</blockquote>
+        <p class="eyebrow">Business · Heilberufe und Coaches</p>
+        <blockquote>„Ich bin gut in meinem Beruf und längst online gestartet, aber mein Business kommt seit Monaten nicht vom Fleck.“</blockquote>
         <p class="meta">Für Heilpraktiker, Therapeuten, Ärzte und Coaches</p>
         <span class="weiter">Zum Business-Mentoring <span aria-hidden="true">→</span></span>
       </a>
@@ -308,26 +361,15 @@
     <div>
       <p class="eyebrow reveal">01 · Naturheilpraxis Nicole Lurz · Wiesloch</p>
       <h2 class="reveal">Viele Befunde, aber <em>keine Antwort?</em></h2>
+      <blockquote class="stimme reveal"><q>„Ich bin nach jahrelanger Suche auf Frau Lurz gekommen. … Durch das Wissen, die Erfahrung und das Feingefühl von Frau Lurz kann ich nun die Not wendenden Schritte gehen, um wieder in meine Kraft zu kommen.“</q><cite>Andrea, Patientin · Bewertung auf ProvenExpert</cite></blockquote>
       <p class="reveal">Viele kommen mit einer dicken Mappe voller Befunde zu mir und haben trotzdem noch niemanden gefunden, der ihnen sagt, was eigentlich los ist. Ich frage nicht nur: Wo tut es weh? Ich frage: Warum kommt Ihr Körper da von allein nicht mehr heraus? Und was braucht er ganz konkret, um wieder in Richtung Gesundheit zu finden?</p>
       <p class="reveal">Statt zehn Baustellen gleichzeitig anzugehen, suche ich die zwei oder drei Dinge, die bei Ihnen wirklich etwas verändern.</p>
-      <p class="zitat reveal">„Ich gebe Ihnen keinen Plan, den Sie blind abarbeiten. Ich möchte, dass Sie selbst gute Entscheidungen für Ihren Körper treffen können. Das Lenkrad halten Sie."</p>
+      <p class="zitat reveal">„Ich gebe Ihnen keinen Plan, den Sie blind abarbeiten. Ich möchte, dass Sie selbst gute Entscheidungen für Ihren Körper treffen können. Das Lenkrad halten Sie.“</p>
     </div>
     <div class="angebote reveal d1">
-      <h3>In der Praxis</h3>
-      <div class="angebot">
-        <strong>Check-in Gespräch</strong>
-        <span>Der Einstieg, um sich kennenzulernen und den ersten Schritt zu klären.</span>
-        <span class="preis">30 Minuten · 75 €</span>
-      </div>
-      <div class="angebot">
-        <strong>Regenerationsanalyse</strong>
-        <span>Zwei Termine à 60 Minuten plus Auswertung.</span>
-        <span class="preis">450 €</span>
-      </div>
-      <div class="angebot">
-        <strong>Bioresonanz und Kinderheilkunde</strong>
-        <span>Weitere Schwerpunkte der Praxis, Details auf der Praxis-Website.</span>
-      </div>
+      <h3>Der Einstieg</h3>
+      <p class="einstieg">Check-in Gespräch</p>
+      <p class="was">Der Einstieg, um sich kennenzulernen und den ersten Schritt zu klären.</p>
       <div class="ctas">
         <a class="btn" href="https://naturheilpraxis-lurz.de/">Zur Praxis-Website</a>
         <a class="leise" href="https://naturheilpraxis-lurz.de/termin-ablauf/">So läuft ein Termin ab</a>
@@ -341,36 +383,20 @@
 <section class="raum r-online" id="online">
   <div class="wrap">
     <div>
-      <p class="eyebrow reveal">02 · Online-Mentoring · für Unternehmerinnen ab 50</p>
+      <p class="eyebrow reveal">02 · Gesundheits-Mentoring · online, für Unternehmerinnen ab 50</p>
       <h2 class="reveal">Du führst dein Business. Aber gerade führt <em>dein Körper dich.</em></h2>
+      <blockquote class="stimme reveal"><q>„Es war so viel dabei, was mir vorher nicht bewusst war. Nicole hat mir Zusammenhänge gezeigt, die kein Arzt gesehen hat, und konkrete Wege, die ich selbst gehen kann.“</q><cite>Verena, Unternehmerin und Schneiderin</cite></blockquote>
       <p class="reveal">Nachts um drei liegst du wach. Blutwerte, Bücher und gut gemeinte Tipps hast du längst gesammelt, und trotzdem fehlt dir der Zusammenhang. Du willst klare Antworten und einfache Schritte, ohne weiter selbst ausprobieren zu müssen, was vielleicht hilft.</p>
       <p class="reveal">Ich helfe erfolgreichen Unternehmerinnen in der Lebensmitte zu verstehen, warum sich ihr Körper verändert. Und wie sie Klarheit und Kontrolle über Energie, Gewicht und Leistungsfähigkeit zurückgewinnen.</p>
       <p class="claimband reveal">Leadership beginnt im eigenen Körper.</p>
     </div>
     <div class="angebote reveal d1">
-      <h3>Im Mentoring</h3>
-      <div class="angebot">
-        <strong>Körper-Cockpit</strong>
-        <span>Der Selbsttest mit 12 Fragen. Nach drei Minuten siehst du, wo es bei dir gerade hakt.</span>
-        <span class="preis">kostenlos</span>
-      </div>
-      <div class="angebot">
-        <strong>Strategie-Call</strong>
-        <span>30 Minuten, in denen ich mir ein erstes Bild von deiner Situation mache und wir gemeinsam klären, was für dich der nächste Schritt ist.</span>
-        <span class="preis">kostenfrei</span>
-      </div>
-      <div class="angebot">
-        <strong>Blind Spot Check</strong>
-        <span>Das 90-minütige Befundgespräch mit deinem 12-Wochen-Protokoll, einem Check-in nach 14 Tagen und WhatsApp-Support. Den Termin vereinbaren wir im Strategie-Call.</span>
-        <span class="preis">530 €</span>
-      </div>
-      <div class="angebot">
-        <strong>The Inner Shift</strong>
-        <span>Begleitung 1:1 oder im kleinen Kreis, der Einstieg läuft über den Strategie-Call.</span>
-      </div>
+      <h3>Der Einstieg</h3>
+      <p class="einstieg">Strategie-Call</p>
+      <p class="was">30 Minuten, in denen ich mir ein erstes Bild von deiner Situation mache und wir gemeinsam klären, was für dich der nächste Schritt ist.</p>
       <div class="ctas">
-        <a class="btn" href="https://nicole-lurz.de/selbsttest/">Zum Körper-Cockpit</a>
-        <a class="leise" href="https://nicole-lurz.de/strategie-call/">Strategie-Call buchen</a>
+        <a class="btn" href="https://nicole-lurz.de/strategie-call/">Strategie-Call buchen</a>
+        <a class="leise" href="https://nicole-lurz.de/">Zu nicole-lurz.de</a>
       </div>
     </div>
   </div>
@@ -380,29 +406,27 @@
 <section class="raum r-business" id="business">
   <div class="wrap">
     <div>
-      <p class="eyebrow reveal">03 · Business-Mentoring · für Heilberufe</p>
+      <p class="eyebrow reveal">03 · Business-Mentoring · für Heilberufe und Coaches</p>
       <h2 class="lang reveal">Du liebst, was du tust. Aber passt die Art, wie du heute arbeitest, <em>noch zu dem Leben, das du führen möchtest?</em></h2>
+      <blockquote class="stimme reveal"><q>„Innerhalb einer Stunde pusht dich Nicole in die nächste Ebene und du denkst über Dinge nach, die du vor der Stunde überhaupt nicht in Erwägung gezogen hast.“</q><cite>Michaela Hirt, Expertin für Hashimoto &amp; Emotionen</cite></blockquote>
       <p class="reveal">Du bist längst gestartet, postest regelmäßig und hast deine Angebote, und trotzdem wächst die Liste kaum und die Anfragen bleiben aus. Mehr Wissen brauchst du dafür meistens nicht. Ich schaue von außen auf das, was an Erfahrung und bisherigen Versuchen schon da ist, und finde den Punkt, an dem du dich gerade im Kreis drehst.</p>
       <p class="beleg reveal">In den letzten zweieinhalb Jahren habe ich mehr als 800 Ärzte, Therapeuten, Heilpraktiker und Coaches in ihrem Business begleitet.</p>
     </div>
-    <div class="angebote reveal d1">
-      <h3>Im Business-Mentoring</h3>
-      <div class="angebot">
-        <strong>Business Blind Spot Check</strong>
-        <span>Reflexionsbogen und Vorab-Analyse, 90 Minuten 1:1, danach 14 Tage WhatsApp-Support. Wenige Plätze pro Monat, nach Bewerbung.</span>
-        <span class="preis">Startpreis 490 € inkl. MwSt bis 31.12.2026, danach 625 €</span>
+    <div>
+      <div class="angebote reveal d1">
+        <h3>Der Einstieg</h3>
+        <p class="einstieg">Kennenlerngespräch</p>
+        <p class="was">Wir schauen gemeinsam, wo dein Business gerade steht und ob eine Zusammenarbeit für uns beide passt.</p>
+        <div class="ctas">
+          <a class="btn" href="https://tidycal.com/nicole-lurz/bbsc">Kennenlerngespräch buchen</a>
+        </div>
       </div>
-      <div class="angebot">
+      <div class="aktuell reveal d2" data-bis="2026-12-18">
+        <span class="marke">Aktuell</span>
         <strong>Business &amp; Life Blueprint 2027</strong>
-        <span>Vier Live-Termine online in einer exklusiven kleinen Gruppe mit 5-10 Frauen, Start am 18.12.2026.</span>
-      </div>
-      <div class="angebot">
-        <strong>The Strategy Shift · Praxis ohne Wartezimmer</strong>
-        <span>Individuelle Begleitung nach Bewerbung.</span>
-      </div>
-      <div class="ctas">
-        <a class="btn" href="https://tidycal.com/nicole-lurz/bbsc">Kennenlerngespräch buchen</a>
-        <a class="leise" href="/blueprint-2027/">Zum Blueprint 2027</a>
+        <p>Vier Live-Termine online in einer exklusiven kleinen Gruppe mit 5-10 Frauen.</p>
+        <p class="start">Start am 18.12.2026</p>
+        <a class="leise" href="/blueprint-2027/">Mehr zum Blueprint 2027 <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -445,18 +469,16 @@
       <div>
         <h4>Praxis</h4>
         <a href="https://naturheilpraxis-lurz.de/">naturheilpraxis-lurz.de</a>
-        <a href="https://naturheilpraxis-lurz.de/termin-ablauf/">Termin-Ablauf</a>
+        <a href="https://naturheilpraxis-lurz.de/termin-ablauf/">Check-in Gespräch</a>
       </div>
       <div>
-        <h4>Online-Mentoring</h4>
+        <h4>Gesundheit</h4>
         <a href="https://nicole-lurz.de/">nicole-lurz.de</a>
-        <a href="https://nicole-lurz.de/selbsttest/">Körper-Cockpit</a>
         <a href="https://nicole-lurz.de/strategie-call/">Strategie-Call</a>
       </div>
       <div>
-        <h4>Business-Mentoring</h4>
+        <h4>Business</h4>
         <a href="https://tidycal.com/nicole-lurz/bbsc">Kennenlerngespräch</a>
-        <a href="/blueprint-2027/">Blueprint 2027</a>
         <a href="mailto:office@nicole-lurz.com">office@nicole-lurz.com</a>
       </div>
     </div>
@@ -473,6 +495,9 @@
 
 <script>
   document.getElementById('jahr').textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-bis]').forEach(el => {
+    if (new Date() > new Date(el.dataset.bis + 'T23:59:59')) el.remove();
+  });
 
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
