@@ -14,7 +14,7 @@
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/favicon-180.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/blog/blog.css?v=20261112c">
+<link rel="stylesheet" href="/blog/blog.css?v=20261113a">
 </head>
 <body>
 
@@ -34,41 +34,57 @@
 </header>
 
 <main>
-  <section class="blog-hero">
-    <div class="wrap hero-raster">
-      <div class="hero-text">
-      <p class="eyebrow">Blog</p>
-      <h1>Ich bringe die Fäden <em>wieder zusammen</em></h1>
-      <p>Manchmal spürst du, dass etwas nicht mehr passt. Vielleicht sendet dein Körper Signale, oder im Business steht etwas an, das du schon länger vor dir herschiebst. Und irgendwann fragst du dich, wer du eigentlich bist und was du wirklich willst.</p>
-      <p>Hier schreibe ich über das, was Frauen ab der Lebensmitte bewegt. Meistens geht es um Gesundheit und Energie oder um die Frage, wer man in dieser Lebensphase eigentlich sein will. Und genauso oft geht es ums eigene Business, weil das eine vom anderen gar nicht so weit weg ist.</p>
-      <p>Mich interessieren die Zusammenhänge hinter den Dingen. Ich möchte dir Wissen und neue Blickwinkel mitgeben, damit du deine Situation besser verstehst und deinen eigenen Weg klarer siehst.</p>
+  <section class="start-hero">
+    <div class="wrap start-raster">
+      <div class="start-text">
+        <p class="eyebrow">Der Blog von Nicole Lurz</p>
+        <h1>Ich bringe die Fäden <em>wieder zusammen</em></h1>
+        <p class="start-intro">Manchmal spürst du, dass etwas nicht mehr passt. Vielleicht sendet dein Körper Signale, oder im Business steht etwas an, das du schon länger vor dir herschiebst. Und irgendwann fragst du dich, wer du eigentlich bist und was du wirklich willst.</p>
+        <p>Hier schreibe ich über das, was Frauen ab der Lebensmitte bewegt. Meistens geht es um Gesundheit und Energie oder um die Frage, wer man in dieser Lebensphase eigentlich sein will. Und genauso oft geht es ums eigene Business, weil das eine vom anderen gar nicht so weit weg ist.</p>
+        <p>Mich interessieren die Zusammenhänge hinter den Dingen. Ich möchte dir Wissen und neue Blickwinkel mitgeben, damit du deine Situation besser verstehst und deinen eigenen Weg klarer siehst.</p>
       </div>
-      <figure class="hero-bild">
-        <img src="/images/nicole-portrait.jpg" alt="Nicole Lurz in ihrer Praxis in Wiesloch" width="825" height="1100">
-        <figcaption><strong>Nicole Lurz</strong>Heilpraktikerin und Mentorin, seit 2011 mit eigener Praxis in Wiesloch</figcaption>
-      </figure>
+      <div class="faeden" aria-hidden="true">
+        <svg viewBox="0 0 420 420" preserveAspectRatio="xMidYMid meet">
+          <path class="f f-praxis" pathLength="1" d="M0 70 C70 20 110 150 60 170 C20 186 40 110 110 120 C170 128 160 200 214 210"/>
+          <path class="f f-online" pathLength="1" d="M0 215 C60 250 90 150 140 190 C180 222 120 260 150 230 C175 205 190 212 214 210"/>
+          <path class="f f-business" pathLength="1" d="M0 360 C80 400 140 300 90 280 C50 264 70 330 130 300 C175 278 175 222 214 210"/>
+        </svg>
+        <img src="/images/nicole-portrait.jpg" alt="">
+        <p class="faeden-name"><strong>Nicole Lurz</strong>Heilpraktikerin und Mentorin</p>
+      </div>
     </div>
   </section>
 
-  <section class="kategorien band">
+  <section class="themen">
     <div class="wrap">
-      <p class="eyebrow">Themen</p>
-      <div class="kat-raster">
-        <button class="kategorie" type="button" data-filter="gesundheit">
-          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
-          <span class="kat-text"><strong>Gesundheit &amp; Energie</strong><span>Den eigenen Körper verstehen und Beschwerden in ihren Zusammenhang einordnen.</span></span>
+      <div class="themen-kopf">
+        <p class="eyebrow">Themen</p>
+        <h2>Vier Themen, <em>ein roter Faden</em></h2>
+      </div>
+      <div class="themen-raster">
+        <button class="thema th-gesundheit" type="button" data-filter="gesundheit">
+          <span class="th-kopf"><span class="th-nr">01</span><span class="th-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span></span>
+          <strong>Gesundheit <em>&amp; Energie</em></strong>
+          <span class="th-text">Den eigenen Körper verstehen und Beschwerden in ihren Zusammenhang einordnen.</span>
+          <span class="th-mehr">Artikel zeigen <span aria-hidden="true">→</span></span>
         </button>
-        <button class="kategorie" type="button" data-filter="persoenlichkeit">
-          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
-          <span class="kat-text"><strong>Persönlichkeit &amp; Identität</strong><span>Alte Rollen hinterfragen und herausfinden, was du in der nächsten Lebensphase wirklich willst.</span></span>
+        <button class="thema th-persoenlichkeit" type="button" data-filter="persoenlichkeit">
+          <span class="th-kopf"><span class="th-nr">02</span><span class="th-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span></span>
+          <strong>Persönlichkeit <em>&amp; Identität</em></strong>
+          <span class="th-text">Alte Rollen hinterfragen und herausfinden, was du in der nächsten Lebensphase wirklich willst.</span>
+          <span class="th-mehr">Artikel zeigen <span aria-hidden="true">→</span></span>
         </button>
-        <button class="kategorie" type="button" data-filter="business">
-          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
-          <span class="kat-text"><strong>Business &amp; Unternehmertum</strong><span>Unternehmerische Herausforderungen verstehen und dein Business so aufstellen, dass es zu deinem Leben passt.</span></span>
+        <button class="thema th-business" type="button" data-filter="business">
+          <span class="th-kopf"><span class="th-nr">03</span><span class="th-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span></span>
+          <strong>Business <em>&amp; Unternehmertum</em></strong>
+          <span class="th-text">Unternehmerische Herausforderungen verstehen und dein Business so aufstellen, dass es zu deinem Leben passt.</span>
+          <span class="th-mehr">Artikel zeigen <span aria-hidden="true">→</span></span>
         </button>
-        <button class="kategorie" type="button" data-filter="einblicke">
-          <span class="kat-bild" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
-          <span class="kat-text"><strong>Einblicke &amp; Entwicklungen</strong><span>Was sich gerade in Gesundheit und Gesellschaft verändert und was mich persönlich beschäftigt.</span></span>
+        <button class="thema th-einblicke" type="button" data-filter="einblicke">
+          <span class="th-kopf"><span class="th-nr">04</span><span class="th-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span></span>
+          <strong>Einblicke <em>&amp; Entwicklungen</em></strong>
+          <span class="th-text">Was sich gerade in Gesundheit und Gesellschaft verändert und was mich persönlich beschäftigt.</span>
+          <span class="th-mehr">Artikel zeigen <span aria-hidden="true">→</span></span>
         </button>
       </div>
     </div>
@@ -100,6 +116,7 @@
     </div>
   </section>
   <section class="autorin-band">
+    <div class="drei-faeden" aria-hidden="true"></div>
     <div class="wrap">
       <img src="/images/nicole-portrait.jpg" alt="" loading="lazy">
       <div>
@@ -126,8 +143,8 @@
     var n=0;
     karten.forEach(function(li){var an=(k==='alle'||li.dataset.kategorie===k); li.hidden=!an; if(an) n++;});
     leer.hidden=n>0;
-    knoepfe.forEach(function(b){b.classList.toggle('aktiv',b.dataset.filter===k&&k!=='alle'); if(b.classList.contains('kategorie')) b.setAttribute('aria-pressed',b.dataset.filter===k);});
-    var akt=document.querySelector('.kategorie[data-filter="'+k+'"] strong');
+    knoepfe.forEach(function(b){b.classList.toggle('aktiv',b.dataset.filter===k&&k!=='alle'); if(b.classList.contains('thema')) b.setAttribute('aria-pressed',b.dataset.filter===k);});
+    var akt=document.querySelector('.thema[data-filter="'+k+'"] strong');
     titel.textContent=akt?akt.textContent:'Alle Artikel';
     alle.hidden=(k==='alle');
   }

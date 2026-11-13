@@ -194,53 +194,87 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
 .kopf ul a:hover,.kopf ul a[aria-current]{color:var(--fastweiss)}
 @media (max-width:960px){.kopf ul li:not(.immer){display:none}}
 
-/* Blog-Übersicht aufgewertet (12.11.2026) */
+/* ===== Blog-Startseite mit allen drei Welten (13.11.2026) ===== */
+:root{--nachtblau:#0F2340;--tiefblau:#1E3A5F;--kupfer:#B85450;--kupfer-hell:#D98A85;--papier-warm:#FAF7F0;--fliesstext-hell:#CDD9CF}
 .kopf ul,.kopf nav ul{margin:0;padding:0}
-.hero-raster{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:72px;align-items:center}
-.blog-hero{padding:80px 0 72px}
-.blog-hero .hero-text p{max-width:600px}
-.hero-bild{position:relative;margin:0}
-.hero-bild img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:18px;box-shadow:0 24px 60px -30px rgba(15,26,20,.45)}
-.hero-bild figcaption{position:absolute;left:-28px;bottom:28px;max-width:250px;background:#fff;border:1px solid var(--linie);border-radius:12px;padding:14px 18px;font-size:14px;line-height:1.45;color:var(--text);box-shadow:0 14px 34px -18px rgba(15,26,20,.35)}
-.hero-bild figcaption strong{display:block;color:var(--tinte);font-size:15px}
-.band{background:var(--fastweiss);padding:56px 0 64px;margin-bottom:64px}
-.band .kat-raster{gap:16px;border-top:0}
-.band .kategorie{background:#fff;border:1px solid var(--linie);border-radius:14px;padding:22px}
-.band .kategorie:hover{border-color:rgba(61,90,46,.35);background:#fff;transform:translateY(-2px)}
-.band .kategorie.aktiv{border-color:var(--waldgruen);box-shadow:0 0 0 1px var(--waldgruen)}
-.kategorie{transition:transform .2s,border-color .2s,background .2s}
-/* Neuester Artikel groß und dunkel */
+/* Kopf */
+.start-hero{background:radial-gradient(90% 120% at 100% 0%,var(--dunkelgruen) 0%,var(--tannenmoos) 55%);color:var(--fliesstext-hell);padding:88px 0 96px;overflow:hidden}
+.start-raster{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center}
+.start-hero .eyebrow{color:var(--seafoam);margin-bottom:22px}
+.start-hero h1{font-weight:600;color:var(--fastweiss);font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-.025em;margin-bottom:30px}
+.start-hero h1 em{display:block;font-size:1.08em;color:var(--seafoam);letter-spacing:-.01em;background:linear-gradient(90deg,var(--praxis-salbei),var(--seafoam) 45%,var(--kupfer-hell));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:.08em}
+.start-hero p{max-width:580px;margin-bottom:14px;font-size:17px}
+.start-hero .start-intro{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.5;color:var(--fastweiss);margin-bottom:22px}
+.faeden{position:relative;width:100%;max-width:420px;aspect-ratio:1;justify-self:end}
+.faeden svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.faeden .f{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:zeichnen 2.6s cubic-bezier(.45,.05,.3,1) forwards}
+.f-praxis{stroke:var(--praxis-salbei)}
+.f-online{stroke:var(--seafoam);animation-delay:.25s!important}
+.f-business{stroke:var(--kupfer-hell);animation-delay:.5s!important}
+@keyframes zeichnen{to{stroke-dashoffset:0}}
+.faeden img{position:absolute;left:51%;top:50%;width:46%;aspect-ratio:1;transform:translateY(-50%);border-radius:50%;object-fit:cover;object-position:center 22%;border:4px solid var(--tannenmoos);box-shadow:0 0 0 2px var(--seafoam),0 20px 50px -20px rgba(0,0,0,.6)}
+.faeden-name{position:absolute;left:51%;width:46%;bottom:6%;text-align:center;font-size:13px!important;color:var(--salbei-hell);margin:0!important}
+.faeden-name strong{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;color:var(--fastweiss)}
+/* Themen-Mosaik */
+.themen{padding:88px 0 72px;background:var(--papier)}
+.themen-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.themen-kopf h2{font-weight:600;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.02em;line-height:1.15}
+.themen-kopf h2 em{color:var(--kupfer)}
+.themen-raster{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.thema{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:0;border-radius:16px;padding:26px 24px 24px;font:inherit;cursor:pointer;min-height:290px;overflow:hidden;transition:transform .25s ease-out,box-shadow .25s}
+.thema::after{content:"";position:absolute;left:24px;right:24px;top:0;height:4px;border-radius:0 0 4px 4px;background:var(--akzent)}
+.thema:hover{transform:translateY(-5px);box-shadow:0 22px 40px -26px rgba(15,26,20,.55)}
+.thema.aktiv{box-shadow:0 0 0 3px var(--akzent)}
+.th-kopf{display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:26px}
+.th-nr{font-family:var(--serif);font-style:italic;font-size:46px;line-height:1;color:var(--akzent)}
+.th-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--icon-bg);color:var(--akzent)}
+.th-icon svg{width:22px;height:22px}
+.thema strong{font-size:21px;font-weight:600;line-height:1.25;margin-bottom:10px;color:var(--titel)}
+.thema strong em{display:block;color:var(--akzent)}
+.th-text{font-size:15px;line-height:1.55;color:var(--txt);flex:1}
+.th-mehr{margin-top:18px;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--akzent)}
+.th-gesundheit{--akzent:var(--waldgruen);--titel:var(--tinte);--txt:var(--text);--icon-bg:rgba(122,143,78,.16);background:#fff;border:1px solid var(--linie)}
+.th-gesundheit .th-nr{color:var(--praxis-salbei)}
+.th-persoenlichkeit{--akzent:var(--seafoam);--titel:var(--fastweiss);--txt:var(--salbei-hell);--icon-bg:rgba(122,168,144,.15);background:var(--tannenmoos)}
+.th-business{--akzent:var(--kupfer-hell);--titel:var(--papier-warm);--txt:#c9d3e0;--icon-bg:rgba(217,138,133,.15);background:radial-gradient(120% 90% at 0% 0%,var(--tiefblau) 0%,var(--nachtblau) 65%)}
+.th-einblicke{--akzent:var(--kupfer);--titel:var(--tinte);--txt:var(--text);--icon-bg:rgba(184,84,80,.12);background:var(--papier-warm);border:1px solid rgba(184,84,80,.18)}
+/* Liste */
+.liste-kopf h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:30px}
+.artikel-liste{padding-bottom:96px}
 .artikel-liste li:first-child:not([hidden]){grid-column:1/-1}
-.artikel-liste li:first-child .karte{background:var(--tannenmoos);border-color:var(--tannenmoos);color:var(--fastweiss);padding:44px 48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px 56px;align-items:end}
+.artikel-liste li:first-child .karte{position:relative;overflow:hidden;background:var(--tannenmoos);border:0;color:var(--fastweiss);padding:48px 52px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px 56px;align-items:end}
+.artikel-liste li:first-child .karte::after{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--praxis-salbei) 0 33.3%,var(--seafoam) 33.3% 66.6%,var(--kupfer) 66.6%)}
+.artikel-liste li:first-child .karte::before{content:"Neu im Blog";grid-column:1/-1;justify-self:start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--nachtblau);background:var(--kupfer-hell);padding:5px 11px;border-radius:999px;margin-bottom:8px}
 .artikel-liste li:first-child .karte .eyebrow{color:var(--seafoam);grid-column:1/-1}
-.artikel-liste li:first-child .karte h2{font-size:clamp(26px,3vw,36px);line-height:1.15;color:var(--fastweiss);margin:0}
+.artikel-liste li:first-child .karte h2{font-size:clamp(28px,3.2vw,40px);line-height:1.12;letter-spacing:-.02em;color:var(--fastweiss);margin:0}
 .artikel-liste li:first-child .karte p:not(.eyebrow){color:var(--salbei-hell);font-size:17px}
 .artikel-liste li:first-child .karte .mehr{color:var(--seafoam);grid-column:2}
-.artikel-liste li:first-child .karte::before{content:"Neu im Blog";grid-column:1/-1;justify-self:start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tannenmoos);background:var(--seafoam);padding:5px 10px;border-radius:999px;margin-bottom:10px}
-.artikel-liste{padding-bottom:88px}
-/* Autorin-Band */
-.autorin-band{background:var(--tannenmoos);padding:64px 0}
-.autorin-band .wrap{display:grid;grid-template-columns:140px minmax(0,1fr);gap:40px;align-items:center;max-width:960px}
-.autorin-band img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid rgba(122,168,144,.4)}
-.autorin-band .eyebrow{color:var(--seafoam);margin-bottom:10px}
-.autorin-band p:not(.eyebrow){color:var(--fastweiss);font-size:19px;line-height:1.6;margin-bottom:16px}
-.autorin-band a{color:var(--seafoam);font-weight:600;font-size:15px}
+.karte[data-k]{}
+/* Über mich */
+.autorin-band{position:relative;background:radial-gradient(120% 120% at 0% 0%,var(--tiefblau) 0%,var(--nachtblau) 60%);padding:72px 0}
+.drei-faeden{position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--praxis-salbei) 0 33.3%,var(--seafoam) 33.3% 66.6%,var(--kupfer) 66.6%)}
+.autorin-band .wrap{display:grid;grid-template-columns:150px minmax(0,1fr);gap:44px;align-items:center;max-width:980px}
+.autorin-band img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 20%;border:4px solid var(--nachtblau);box-shadow:0 0 0 2px var(--kupfer-hell)}
+.autorin-band .eyebrow{color:var(--kupfer-hell);margin-bottom:12px}
+.autorin-band p:not(.eyebrow){font-family:var(--serif);font-size:22px;line-height:1.55;color:var(--papier-warm);margin-bottom:18px}
+.autorin-band a{color:var(--kupfer-hell);font-weight:600;font-size:15px}
+.fuss{border-top:1px solid rgba(122,168,144,.12)}
+@media (max-width:1100px){.themen-raster{grid-template-columns:repeat(2,minmax(0,1fr))}.thema{min-height:0}}
 @media (max-width:900px){
-  .hero-raster{grid-template-columns:1fr;gap:40px}
-  .hero-bild{max-width:420px}
-  .hero-bild figcaption{left:16px}
-  .artikel-liste li:first-child .karte{grid-template-columns:1fr;padding:32px 28px}
+  .start-raster{grid-template-columns:1fr;gap:24px}
+  .faeden{max-width:300px;justify-self:start;order:-1}
+  .artikel-liste li:first-child .karte{grid-template-columns:1fr;padding:34px 28px}
   .artikel-liste li:first-child .karte .mehr{grid-column:1}
 }
 @media (max-width:560px){
-  .blog-hero{padding:48px 0 48px}
-  .band{padding:40px 0 44px;margin-bottom:44px}
-  .autorin-band .wrap{grid-template-columns:1fr;gap:20px}
-  .autorin-band img{width:96px;height:96px}
-  .autorin-band p:not(.eyebrow){font-size:17px}
+  .start-hero{padding:48px 0 64px}
+  .start-hero .start-intro{font-size:20px}
+  .themen{padding:56px 0 48px}
+  .themen-raster{grid-template-columns:1fr}
+  .autorin-band .wrap{grid-template-columns:1fr;gap:22px}
+  .autorin-band img{width:104px;height:104px}
+  .autorin-band p:not(.eyebrow){font-size:19px}
 }
-.hero-raster{grid-template-columns:minmax(0,1.5fr) minmax(0,.75fr);align-items:start}
-.hero-bild{max-width:380px;justify-self:end;margin-top:8px}
-.hero-bild img{aspect-ratio:5/6}
-@media (max-width:900px){.hero-bild{justify-self:start;max-width:340px}}
-@media (max-width:900px){.hero-raster{grid-template-columns:1fr;gap:36px}.hero-bild{justify-self:start;max-width:320px}}
+@media (prefers-reduced-motion:reduce){.faeden .f{animation:none;stroke-dashoffset:0}.thema{transition:none}}
+.themen-kopf{flex-direction:column;align-items:flex-start;gap:10px}
+.faeden .f{stroke-width:3}
