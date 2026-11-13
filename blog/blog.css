@@ -278,3 +278,11 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
 @media (prefers-reduced-motion:reduce){.faeden .f{animation:none;stroke-dashoffset:0}.thema{transition:none}}
 .themen-kopf{flex-direction:column;align-items:flex-start;gap:10px}
 .faeden .f{stroke-width:3}
+/* Weiterlesen im Artikel (13.11.2026) */
+.weiter{margin-top:56px}
+.weiter h2{font-size:24px;font-weight:600;margin-bottom:16px}
+.weiter-liste{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.weiter-liste a{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--linie);border-radius:12px;padding:20px;text-decoration:none;color:var(--tinte);transition:transform .2s,border-color .2s}
+.weiter-liste a:hover{transform:translateY(-3px);border-color:var(--waldgruen)}
+.weiter-liste small{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--waldgruen)}
+.weiter-liste strong{font-size:17px;line-height:1.35}
