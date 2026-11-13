@@ -286,3 +286,11 @@ em{font-family:var(--serif);font-style:italic;font-weight:400}
 .weiter-liste a:hover{transform:translateY(-3px);border-color:var(--waldgruen)}
 .weiter-liste small{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--waldgruen)}
 .weiter-liste strong{font-size:17px;line-height:1.35}
+
+/* Grafiken im Artikel (seit 13.11.2026) */
+.abb{margin:32px 0;padding:22px 18px 14px;background:#fff;border:1px solid var(--linie);border-radius:10px}
+.abb-bild{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.abb svg{display:block;width:100%;min-width:520px;height:auto;font-family:var(--sans)}
+.abb figcaption{font-size:13px;line-height:1.5;color:var(--leise);margin-top:8px}
+.einblick .fall-hinweis{font-size:13px;color:var(--salbei-hell);margin:14px 0 0}
+@media print{.abb{break-inside:avoid}.abb-bild{overflow:visible}.abb svg{min-width:0}}
