@@ -312,22 +312,25 @@ footer a{text-decoration:none}
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Course",
-      "@id": "https://nicole-lurz.com/blueprint-2027/#kurs",
+      "@type": "Event",
+      "@id": "https://nicole-lurz.com/blueprint-2027/#mentoring",
       "name": "Business & Life Blueprint 2027",
       "url": "https://nicole-lurz.com/blueprint-2027/",
-      "description": "Vier Live-Termine online in einer exklusiven kleinen Gruppe mit 5-10 Frauen, Start am 18.12.2026.",
+      "description": "Online-Live-Mentoring mit Nicole Lurz. Vier Live-Termine online in einer exklusiven kleinen Gruppe mit 5-10 Frauen, Start am 18.12.2026.",
+      "startDate": "2026-12-18",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://nicole-lurz.com/blueprint-2027/"
+      },
+      "image": "https://nicole-lurz.com/blueprint-2027/images/og-blueprint-2027.jpg",
       "inLanguage": "de",
-      "provider": {
+      "organizer": {
         "@id": "https://nicole-lurz.com/#nicole"
       },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "online",
-        "startDate": "2026-12-18",
-        "instructor": {
-          "@id": "https://nicole-lurz.com/#nicole"
-        }
+      "performer": {
+        "@id": "https://nicole-lurz.com/#nicole"
       }
     },
     {
