@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="../fonts/fonts.css">
 <style>
 :root{
-  --nachtblau:#0F2340;--tiefblau:#1E3A5F;--kupfer:#B85450;--kupfer-hell:#D98A85;
-  --papier:#FAF7F0;--offwhite:#F6F1E8;--tinte:#1C1C1C;
-  --papier-soft:rgba(250,247,240,.78);--papier-line:rgba(250,247,240,.14);--tinte-soft:rgba(28,28,28,.68);--line:rgba(15,35,64,.12);
+  --nachtblau:#0F2340;--tiefblau:#1E3A5F;--kupfer:#1B4C93;--kupfer-hell:#D9C28E;--wasserblau:#8FB4CE;
+  --papier:#E8F0E8;--offwhite:#FFFFFF;--tinte:#1C1C1C;
+  --papier-soft:#C9D3E0;--papier-line:rgba(232,240,232,.14);--tinte-soft:rgba(28,28,28,.68);--line:rgba(15,35,64,.12);
   --serif:'Spectral',Georgia,serif;--sans:'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -25,13 +25,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacin
 
 /* Hero */
 .hero{position:relative;background:var(--nachtblau);color:var(--papier);padding:120px 0 110px;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-30%;right:-12%;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(184,84,80,.32),transparent 65%)}
-.hero::after{content:"";position:absolute;bottom:-40%;left:-15%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(30,58,95,.9),transparent 70%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,transparent,rgba(30,58,95,.55));pointer-events:none}
 .hero .wrap{position:relative;z-index:2}
 .brand{font-family:var(--serif);font-size:22px;color:var(--papier);text-decoration:none;position:absolute;top:-72px;left:24px}
-.brand em{color:var(--kupfer-hell)}
-.check{width:64px;height:64px;border-radius:50%;border:1px solid var(--papier-line);display:grid;place-items:center;margin-bottom:30px;background:rgba(250,247,240,.04)}
-.check svg{width:28px;height:28px;stroke:var(--kupfer-hell);stroke-dasharray:40;stroke-dashoffset:40;animation:draw .9s .3s ease forwards}
+.brand em{color:var(--wasserblau)}
+.check{width:64px;height:64px;border-radius:3px;border:1px solid var(--papier-line);display:grid;place-items:center;margin-bottom:30px;background:rgba(232,240,232,.04)}
+.check svg{width:28px;height:28px;stroke:var(--wasserblau);stroke-dasharray:40;stroke-dashoffset:40;animation:draw .9s .3s ease forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 .hero .eyebrow{color:var(--kupfer-hell)}
 .hero h1{font-size:clamp(40px,6.4vw,74px);margin:18px 0 22px;max-width:980px}
@@ -43,7 +42,7 @@ section{padding:96px 0}
 h2{font-size:clamp(32px,4.4vw,46px);margin:14px 0 40px}
 h2 em{font-style:italic;color:var(--kupfer)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
-.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 28px 30px;box-shadow:0 20px 50px -30px rgba(15,35,64,.25)}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:3px;padding:34px 28px 30px;box-shadow:0 20px 50px -30px rgba(15,35,64,.25)}
 .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:block;font-family:var(--serif);font-style:italic;font-size:34px;color:var(--kupfer);line-height:1;margin-bottom:18px}
 .step h3{font-size:23px;color:var(--nachtblau);margin-bottom:10px}
 .step p{font-size:15.5px;color:var(--tinte-soft)}
@@ -51,31 +50,31 @@ h2 em{font-style:italic;color:var(--kupfer)}
 .note{margin-top:26px;font-size:15px;color:var(--tinte-soft);display:flex;gap:12px;align-items:flex-start}
 .note svg{flex:0 0 20px;margin-top:3px}
 
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--kupfer);color:var(--papier);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.04em;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;transition:transform .25s,background .25s}
-.btn:hover{background:#A3473F;transform:translateY(-2px)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--nachtblau);color:var(--papier);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.04em;padding:13px 22px;border-radius:3px;border:0;cursor:pointer;transition:transform .25s,background .25s}
+.btn:hover{background:#1E3A5F;transform:translateY(-2px)}
 .btn svg{width:16px;height:16px}
 
 /* Termine */
 .dates{background:var(--offwhite)}
 .timeline{list-style:none;position:relative;max-width:720px}
-.timeline::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:rgba(184,84,80,.35)}
+.timeline::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:rgba(27,76,147,.35)}
 .timeline li{position:relative;padding:0 0 30px 44px}
-.timeline li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border-radius:50%;background:var(--papier);border:2px solid var(--kupfer)}
+.timeline li::before{content:"";position:absolute;left:2px;top:5px;width:11px;height:20px;border-radius:3px;background:var(--papier);border:2px solid var(--kupfer)}
 .timeline li.soft::before{border-style:dashed}
 .timeline .d{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--kupfer)}
 .timeline .t{font-family:var(--serif);font-size:24px;color:var(--nachtblau);line-height:1.3}
 .timeline .m{font-size:14.5px;color:var(--tinte-soft)}
-.early{margin-top:14px;max-width:720px;padding:22px 24px;border-radius:16px;background:rgba(184,84,80,.1);border:1px solid rgba(184,84,80,.25);font-size:15.5px}
+.early{margin-top:14px;max-width:720px;padding:22px 24px;border-radius:3px;background:rgba(27,76,147,.1);border:1px solid rgba(27,76,147,.25);font-size:15.5px}
 .early b{color:var(--kupfer)}
 
 /* Gruss */
 .bye{background:var(--nachtblau);color:var(--papier)}
 .bye .wrap{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:center}
-.bye img{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:3px solid rgba(217,138,133,.5)}
+.bye img{width:200px;height:250px;border-radius:3px;object-fit:cover;object-position:50% 20%;border:2px solid rgba(143,180,206,.6)}
 .bye p{font-size:18px;color:var(--papier-soft);max-width:560px}
 .bye .sig{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--kupfer-hell);margin-top:16px;line-height:1}
 
-footer{background:#0A1830;color:rgba(250,247,240,.6);font-size:13px;padding:28px 0}
+footer{background:#0A1830;color:rgba(232,240,232,.6);font-size:13px;padding:28px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{text-decoration:none}
 footer a:hover{color:var(--papier)}
@@ -105,7 +104,7 @@ footer a:hover{color:var(--papier)}
     <a class="brand" href="../">Nicole <em>Lurz</em></a>
     <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
     <div class="eyebrow">Buchung erfolgreich</div>
-    <h1>Schön, dass du dabei bist.<em>Dein Blueprint 2027 beginnt am 18. Dezember.</em></h1>
+    <h1>Schön, dass du dabei bist.<em>Dein Blueprint 2027 beginnt am 17. Dezember.</em></h1>
     <p class="lead">Ich freue mich darauf, mit dir und den anderen Frauen in der Gruppe dein Jahr 2027 zu planen.</p>
   </div>
 </header>
@@ -126,33 +125,33 @@ footer a:hover{color:var(--papier)}
       <div class="step reveal">
         <h3>Deine Termine im Kalender</h3>
         <p>Trag dir die vier Live-Termine am besten gleich ein. Alle Termine sind online um 9 Uhr und dauern jeweils 90 Minuten.</p>
-        <button class="btn" type="button" id="ics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>In den Kalender</button>
+        <button class="btn" type="button" id="ics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>In den Kalender</button>
       </div>
     </div>
-    <p class="note reveal"><svg viewBox="0 0 24 24" fill="none" stroke="#B85450" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>Keine E-Mail angekommen? Dann schau bitte auch in deinen Spam- oder Werbe-Ordner.</p>
+    <p class="note reveal"><svg viewBox="0 0 24 24" fill="none" stroke="#1B4C93" stroke-width="1.8" stroke-linecap="round"><rect x="3.500" y="3.500" width="17" height="17"/><path d="M12 8v5M12 16.5v.5"/></svg>Keine E-Mail angekommen? Dann schau bitte auch in deinen Spam- oder Werbe-Ordner.</p>
   </div>
 </section>
 
 <section class="dates">
   <div class="wrap">
     <div class="eyebrow reveal">Deine Termine</div>
-    <h2 class="reveal">Vom Business Reset bis zum <em>Flow</em></h2>
+    <h2 class="reveal">Vom Business Reset bis zu deinem <em>Plan im Alltag</em></h2>
     <ul class="timeline reveal">
-      <li><div class="d">Fr, 18.12.2026 · 9 Uhr</div><div class="t">Business Reset</div><div class="m">Live online, 90 Minuten</div></li>
-      <li class="soft"><div class="d">Über die Weihnachtstage</div><div class="t">Deine KI-Vorbereitung</div><div class="m">In deinem eigenen Tempo mit der Vorlage</div></li>
-      <li><div class="d">Mi, 06.01.2027 · 9 Uhr</div><div class="t">Revenue &amp; Offer Strategy</div><div class="m">Live online, 90 Minuten</div></li>
-      <li><div class="d">Fr, 08.01.2027 · 9 Uhr</div><div class="t">Business &amp; Life Planning</div><div class="m">Live online, 90 Minuten</div></li>
-      <li><div class="d">Fr, 15.01.2027 · 9 Uhr</div><div class="t">Creative Execution &amp; Flow</div><div class="m">Live online, 90 Minuten</div></li>
+      <li><div class="d">Do, 17.12.2026 · 9 Uhr</div><div class="t">Business Reset &amp; Reflexion</div><div class="m">Live online, 90 Minuten</div></li>
+      <li class="soft"><div class="d">Zwischen den Jahren</div><div class="t">Visionsreise und Rauhnächte-Fragen</div><div class="m">In deinem eigenen Tempo</div></li>
+      <li><div class="d">Fr, 08.01.2027 · 9 Uhr</div><div class="t">Dein Rahmen für 2027</div><div class="m">Live online, 90 Minuten</div></li>
+      <li><div class="d">Di, 12.01.2027 · 9 Uhr</div><div class="t">Umsatz, der zu dir passt</div><div class="m">Live online, 90 Minuten</div></li>
+      <li><div class="d">Fr, 15.01.2027 · 9 Uhr</div><div class="t">Dein Plan im Alltag</div><div class="m">Live online, 90 Minuten</div></li>
     </ul>
-    <p class="early reveal" id="early">Du hast bis zum 30.11.2026 gebucht und gehörst zu den ersten fünf? Dann ist die Bonus-Session <b>„Angebotsstrategie 2027“</b> für dich mit dabei.</p>
+    <p class="early reveal" id="early">Du hast als <b>Super Early Bird</b> oder <b>Early Bird</b> gebucht? Dann melde ich mich dazu gesondert per E-Mail bei dir.</p>
   </div>
 </section>
 
 <section class="bye">
   <div class="wrap">
-    <img class="reveal" src="../images/nicole-sw.jpg" alt="Nicole Lurz" width="200" height="200" loading="lazy">
+    <img class="reveal" src="../images/nicole-sw.jpg" alt="Nicole Lurz" width="200" height="250" loading="lazy">
     <div class="reveal">
-      <p>Bis zum 18. Dezember. Bring dein Jahr 2026 einfach so mit, wie es gerade ist, den Rest machen wir gemeinsam.</p>
+      <p>Bis zum 17. Dezember. Bring dein Jahr 2026 einfach so mit, wie es gerade ist, den Rest machen wir gemeinsam.</p>
       <div class="sig">Nicole</div>
     </div>
   </div>
@@ -161,6 +160,7 @@ footer a:hover{color:var(--papier)}
 <footer>
   <div class="wrap">
     <span>© Nicole Lurz · Business-Mentoring</span>
+    <span>Fragen? <a href="https://wa.me/message/QXAYPG3GPUZRF1" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:office@nicole-lurz.com">office@nicole-lurz.com</a></span>
     <span><a href="https://nicole-lurz.de/impressum/">Impressum</a> · <a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a></span>
   </div>
 </footer>
@@ -174,11 +174,9 @@ footer a:hover{color:var(--papier)}
     els.forEach(function(el){io.observe(el)});
   }else{els.forEach(function(el){el.classList.add('in')})}
 
-  // Early-Bird-Hinweis nur bis 30.11.2026 zeigen
-  if(new Date()>new Date('2026-11-30T23:59:59+01:00')){var eb=document.getElementById('early');if(eb)eb.remove()}
 
   // Kalenderdatei mit den vier Live-Terminen (9:00-10:30 Uhr deutscher Zeit = 8:00-9:30 UTC)
-  var termine=[['20261218','Business Reset'],['20270106','Revenue & Offer Strategy'],['20270108','Business & Life Planning'],['20270115','Creative Execution & Flow']];
+  var termine=[['20261217','Business Reset & Reflexion'],['20270108','Dein Rahmen für 2027'],['20270112','Umsatz, der zu dir passt'],['20270115','Dein Plan im Alltag']];
   document.getElementById('ics').addEventListener('click',function(){
     var now=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
     var lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Nicole Lurz//Blueprint 2027//DE','CALSCALE:GREGORIAN','METHOD:PUBLISH'];
