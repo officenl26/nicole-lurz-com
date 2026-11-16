@@ -394,7 +394,7 @@ footer a{text-decoration:none}
     <p class="lead" style="margin-top:14px">Im Blueprint bekommst du für 2027 einen Rahmen, der auch dann noch da ist, wenn das Leben dazwischenkommt. Du weißt, was du verdienen willst und wann du frei hast. Und innerhalb davon kannst du dich weiter austoben, mit allen Ideen, die dir so kommen.</p>
     <p class="for">Du bist selbständig und dir fällt unter der Dusche schon wieder ein neues Angebot ein, obwohl das letzte noch gar nicht fertig ist. Und wenn dir jemand mit einem Businessplan kommt, kriegst du eigentlich schon Platzangst. Dann passt der Blueprint zu dir, egal ob du berätst, gestaltest, behandelst oder coachst.</p>
     <div class="actions">
-      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase">Hier anmelden <span class="arr">→</span></a>
+      <a class="btn" href="#investition">Ich sichere mir meinen Platz <span class="arr">→</span></a>
       <a class="btn ghost" href="#programm">Das Programm ansehen</a>
     </div>
     <div class="facts">
@@ -647,6 +647,7 @@ footer a{text-decoration:none}
           <div><b data-cd="s">00</b><span>Sek</span></div>
         </div>
         <small id="cd-text">Super Early Bird bis einschließlich 25.11.2026 oder bis fünf Plätze vergeben sind. Early Bird bis einschließlich 04.12.2026.</small>
+        <a class="btn" id="bonus-btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" style="margin-top:26px;align-self:flex-start"><span id="bonus-btn-t">Platz mit Bonus sichern</span> <span class="arr">→</span></a>
       </div>
     </div>
   </div>
@@ -832,7 +833,7 @@ footer a{text-decoration:none}
         <li>Member-Bereich mit allen Aufzeichnungen und zusätzlichen Materialien</li>
         <li>Geld-zurück-Garantie bis 7 Tage nach dem ersten Termin</li>
       </ul>
-      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" id="anmelden">Hier anmelden <span class="arr">→</span></a>
+      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" id="anmelden">Ich sichere mir meinen Platz <span class="arr">→</span></a>
       <p class="early" id="early">Bis einschließlich 25.11.2026 (oder bis fünf Plätze vergeben sind) bekommst du den Kassensturz zu zweit und den Check-in im Februar dazu. Bis einschließlich 04.12.2026 ist der Check-in im Februar dabei.</p>
     </div>
     <div class="wa reveal">
@@ -907,8 +908,10 @@ footer a{text-decoration:none}
       <p class="sub">Du musst nicht noch ein Jahr damit verbringen, auf alles zu reagieren, was gerade dringend ist.</p>
       <p class="sub" style="margin-top:14px">Du kannst entscheiden, was du aufbauen möchtest, welche Ideen Raum bekommen und wie dein Business dich dabei unterstützt, das Leben zu führen, das du dir wünschst.</p>
       <p class="claim">Dein Business. Deine Umsatzziele. Deine kreative Freiheit.</p>
-      <p style="color:var(--papier);margin-bottom:26px">Deine Investition: 590 € inkl. MwSt. (495,80 € netto)</p>
-      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase">Hier anmelden <span class="arr">→</span></a>
+      <p style="color:var(--papier);margin-bottom:10px">Deine Investition: 590 € inkl. MwSt. (495,80 € netto)</p>
+      <p id="final-frist" style="color:var(--champagner);font-size:15px">Bis 25.11.2026 (oder bis fünf Plätze weg sind) mit Kassensturz zu zweit und Check-in im Februar</p>
+      <div style="height:26px"></div>
+      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase">Ich sichere mir meinen Platz <span class="arr">→</span></a>
       <p class="sub wa-line">Falls du noch Fragen hast oder dir nicht sicher bist, lass uns das unkompliziert <a href="https://wa.me/message/QXAYPG3GPUZRF1" target="_blank" rel="noopener">per WhatsApp</a> klären.</p>
     </div>
   </div>
@@ -924,7 +927,7 @@ footer a{text-decoration:none}
 
 <div class="sticky-cta" id="sticky">
   <div><b>590 €</b> <span style="font-size:12px;opacity:.75">inkl. MwSt.</span></div>
-  <a class="btn small" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase">Anmelden</a>
+  <a class="btn small" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase">Platz sichern</a>
 </div>
 
 <script>
@@ -963,7 +966,7 @@ footer a{text-decoration:none}
 
   /* Countdown: Super Early Bird bis 25.11.2026, danach Early Bird bis 04.12.2026, jeweils 23:59:59 */
   var endSEB=new Date(2026,10,25,23,59,59).getTime(),endEB=new Date(2026,11,4,23,59,59).getTime();
-  var cd=document.getElementById('countdown'),lbl=document.getElementById('cd-lbl'),cdt=document.getElementById('cd-text'),early=document.getElementById('early');
+  var cd=document.getElementById('countdown'),lbl=document.getElementById('cd-lbl'),cdt=document.getElementById('cd-text'),early=document.getElementById('early'),ff=document.getElementById('final-frist');
   function pad(n){return String(n).padStart(2,'0')}
   function tick(){
     var now=Date.now(),end=endSEB;
@@ -971,11 +974,12 @@ footer a{text-decoration:none}
       end=endEB;lbl.textContent='Early Bird endet in';
       cdt.textContent='Der Super Early Bird ist vorbei. Den Check-in im Februar bekommst du noch bis einschließlich 04.12.2026 dazu.';
       early.textContent='Bis einschließlich 04.12.2026 ist der Check-in im Februar dabei.';
+      ff.textContent='Bis 04.12.2026 mit Check-in im Februar';
     }
     if(now>endEB){
       cd.style.display='none';lbl.textContent='Early Bird beendet';
       cdt.textContent='Die Early-Bird-Boni sind seit dem 05.12.2026 nicht mehr Bestandteil des Angebots.';
-      early.style.display='none';return
+      early.style.display='none';ff.style.display='none';document.getElementById('bonus-btn-t').textContent='Ich sichere mir meinen Platz';return
     }
     var sec=Math.floor((end-now)/1000);
     cd.querySelector('[data-cd=d]').textContent=pad(Math.floor(sec/86400));
