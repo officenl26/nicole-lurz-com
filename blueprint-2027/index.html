@@ -107,7 +107,7 @@ nav.top.scrolled .links a:hover{color:var(--nachtblau)}
 .hero .eyebrow{color:var(--champagner)}
 .hero h1{font-size:clamp(42px,7vw,86px);max-width:900px;margin-bottom:26px}
 .hero h1 span{display:block}
-.hero .claim{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,28px);color:var(--papier);margin-bottom:28px;max-width:760px}
+.hero .claim{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,28px);color:var(--papier);margin-bottom:28px;max-width:760px;text-wrap:balance}
 .hero p.lead{font-size:18px;color:var(--papier-soft);max-width:680px}
 .hero .for{margin-top:28px;padding-left:18px;border-left:2px solid var(--akzent);font-size:15px;color:var(--papier-soft);max-width:640px}
 .hero .actions{margin-top:42px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
@@ -247,6 +247,7 @@ nav.top.scrolled .links a:hover{color:var(--nachtblau)}
 .portrait .badge b{font-family:var(--serif);font-size:34px;font-weight:500;display:block;line-height:1}
 .portrait .badge span{font-size:12px;opacity:.8}
 .about p{color:var(--tinte-soft)}
+.ki-shot{margin:34px 0 30px}.ki-shot .chat{background:#fff;border:1px solid var(--tinte-line);border-radius:3px;padding:24px;box-shadow:0 14px 34px rgba(15,35,64,.10);font-size:15px;line-height:1.6}.ki-shot .chat span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tinte-soft);margin-bottom:6px}.ki-shot .chat-q{margin:0 0 20px auto;max-width:85%;background:#F2F2F2;border-radius:12px;padding:14px 16px;color:var(--tinte)}.ki-shot .chat-a p{margin:0 0 10px;color:var(--tinte)}.ki-shot .chat-a p:last-child{margin:0}.ki-shot figcaption{margin-top:12px;font-size:14px;font-style:italic;color:var(--tinte-soft)}
 .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .creds span{font-size:13px;font-weight:500;padding:9px 16px;border-radius:3px;border:1px solid var(--tinte-line);background:#fff;color:var(--nachtblau)}
 
@@ -419,8 +420,8 @@ footer a{text-decoration:none}
     <a class="brand" href="#top">Nicole Lurz<small>Business-Mentoring</small></a>
     <div class="links">
       <a href="#programm">Programm</a>
-      <a href="#bonus">Early Bird</a>
       <a href="#ueber-mich">Über mich</a>
+      <a href="#bonus">Early Bird</a>
       <a href="#faq">FAQ</a>
       <a class="btn small" href="#investition">Platz sichern</a>
     </div>
@@ -434,10 +435,10 @@ footer a{text-decoration:none}
     <div class="year">2027</div>
     <div class="eyebrow">Exklusive Runde mit höchstens 8 Frauen · Start 17.12.2026</div>
     <h1><span>Business &amp; Life</span><span><em>Blueprint 2027</em></span></h1>
-    <p class="claim">2027 soll nicht wieder ein Jahr werden, in dem du nur reagierst.</p>
+    <p class="claim">Ein Plan für 2027, der nicht schon im Februar im Schrank einstaubt.</p>
     <p class="lead">Du hast viele Ideen und mehrere Angebote, du hast Kundinnen online und offline und nebenbei machst du noch Marketing und Buchhaltung. Und irgendwo dazwischen ist dein Leben.</p>
-    <p class="lead" style="margin-top:14px">Und trotzdem fühlt sich 2026 vielleicht so an, als würdest du viel machen und dabei einem Plan folgen, den andere für dich gemacht haben.</p>
-    <p class="lead" style="margin-top:14px">Im Business &amp; Life Blueprint 2027 machst du daraus wieder deinen Plan, für dein Business und für dein Leben. Mit mehr Umsatz, mehr Zeit und mehr Energie und mit weniger Aufschieben und weniger Ausbrennen.</p>
+    <p class="lead" style="margin-top:14px">Die kostenlosen Jahresplanungen im Dezember sind gut, um sich mal Gedanken zu machen. Da sitzt du halt mit ganz vielen Frauen im Zoom und machst danach allein dein Workbook. Im Blueprint sind wir höchstens acht und ich schaue mir dein Business mit deinen Zahlen an. Und wir planen im Januar weiter, wenn der Alltag schon wieder losgeht und die meisten Pläne aus dem Dezember schon im Schrank liegen.</p>
+    <p class="lead" style="margin-top:14px">Und am Ende hast du eine KI-Assistentin, die deinen Plan kennt und dir liebevoll einen Stups in den Hintern gibt, wenn du was vor dir herschiebst.</p>
     <p class="for"><b>4 Live-Termine, höchstens 8 Frauen, exklusive Runde</b><br>17.12.2026, 08.01., 12.01. und 15.01.2027, jeweils 9 Uhr, 90 Minuten online<br><b>590 € Early Bird bis 04.12.2026</b>, danach 690 €, inkl. MwSt.<br>Anmeldeschluss 13.12.2026 oder wenn alle 8 Plätze vergeben sind</p>
     <div class="actions">
       <a class="btn" href="#investition">Ich sichere mir meinen Platz <span class="arr">→</span></a>
@@ -457,12 +458,12 @@ footer a{text-decoration:none}
 <section id="problem">
   <div class="wrap narrow">
     <div class="reveal">
-      <div class="eyebrow">Kennst du das?</div>
+      <div class="eyebrow">Dein Alltag gerade</div>
       <h2>Hast du manchmal das Gefühl, dass <em>alles gleichzeitig</em> passiert?</h2>
       <p>Du hast viele Ideen. Vielleicht sogar mehr, als du umsetzen kannst.</p>
       <p>Du hast unterschiedliche Angebote, arbeitest online und offline, betreust Kundinnen, entwickelst neue Projekte und kümmerst dich nebenbei um Marketing, Buchhaltung und Organisation.</p>
       <p>Und irgendwo dazwischen möchtest du eigentlich auch noch dein eigenes Leben genießen.</p>
-      <p style="margin-top:28px;color:var(--nachtblau);font-weight:600">Doch häufig passiert etwas anderes:</p>
+      <p style="margin-top:28px;color:var(--nachtblau);font-weight:600">Und dann sieht dein Montag oft so aus:</p>
     </div>
     <div class="pain-list reveal">
       <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Du startest den Montag und weißt nicht, wo du anfangen sollst.</span></button>
@@ -470,12 +471,15 @@ footer a{text-decoration:none}
       <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Dein Umsatz kommt aus Zufall, aus Launch-Stress oder aus „mal schauen, was kommt“.</span></button>
       <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Du schiebst vor dir her, weil du nicht weißt, was jetzt wirklich dran ist.</span></button>
       <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Dein Offline-Business, also deine Praxis oder deine Beratung vor Ort, geht irgendwie unter, weil online immer lauter schreit.</span></button>
+      <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Dein Business läuft auf Kosten deines Lebens und deiner Energie.</span></button>
+      <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Deine Ferien musst du dir zwischen zwei Launches abknapsen.</span></button>
+      <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Du hast Angebote, die Geld bringen, aber dich leer machen.</span></button>
       <button class="pain" type="button"><span class="box"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#E8F0E8" stroke-width="2"/></svg></span><span>Und du machst Angebote, weil man dir im Coaching-Markt gesagt hat, dass man das so machen muss, also Online-Kurs hier und Funnel da, obwohl es sich für dich gar nicht richtig anfühlt.</span></button>
     </div>
     <p class="hint">Tipp: Klick an, was du von dir kennst.</p>
     <div class="turn reveal">
-      <p>Du brauchst nicht noch mehr Aufgaben und nicht noch mehr Disziplin.</p>
-      <p class="big" style="margin-top:12px">Du brauchst einen <em>roten Faden</em>, der deine Ideen, deine Umsatzziele und dein Leben miteinander verbindet.</p>
+      <p>Mehr Aufgaben und mehr Disziplin hast du wahrscheinlich schon probiert.</p>
+      <p class="big" style="margin-top:12px">Was dir dabei hilft, ist ein <em>roter Faden</em>, der deine Ideen und deine Umsatzziele mit deinem Leben verbindet.</p>
       <p style="margin-top:14px">Und den Mut, wegzulassen, was nicht mehr zu dir passt.</p>
     </div>
   </div>
@@ -498,38 +502,23 @@ footer a{text-decoration:none}
 <section class="dark" id="vision">
   <div class="wrap narrow">
     <div class="reveal">
-      <div class="eyebrow" style="color:var(--champagner)">Stell dir vor</div>
+      <div class="eyebrow" style="color:var(--champagner)">Januar 2027</div>
       <h2>Was wäre, wenn 2027 <em>anders</em> läuft?</h2>
       <p>Stell dir vor, du startest ins neue Jahr und weißt:</p>
       <p class="quote-line">Du hast einen Plan, der dir Sicherheit gibt, aber dich nicht in ein Korsett steckt.</p>
-      <p style="margin-top:20px">Du kannst neue Ideen aufgreifen, kreativ bleiben und dein Business weiterentwickeln, ohne jedes Mal den Überblick zu verlieren.</p>
+      <p style="margin-top:20px">Du kannst neue Ideen aufgreifen und kreativ bleiben, ohne jedes Mal den Überblick zu verlieren.</p>
       <p style="margin-top:20px">Du weißt, womit du dein Geld verdienst. Und du weißt auch, womit nicht mehr.</p>
-      <p style="margin-top:20px;color:var(--papier)">Genau dafür gibt es den Business &amp; Life Blueprint 2027.</p>
+      <p style="margin-top:20px;color:var(--papier)">Und da setzen wir im Blueprint an.</p>
     </div>
   </div>
 </section>
 
 <!-- VORHER NACHHER -->
 <section class="soft" id="danach">
-  <div class="wrap">
-    <div class="cols">
+  <div class="wrap narrow">
+    <div class="cols" style="grid-template-columns:1fr">
       <div class="reveal">
-        <div class="eyebrow">Was du hinter dir lässt</div>
-        <h2>Endlich <em>nicht mehr</em></h2>
-        <ul class="lst weg">
-          <li>jeden Montag überlegen, wo du anfangen sollst</li>
-          <li>10 Ideen gleichzeitig im Kopf und keine davon fertig</li>
-          <li>Umsatz aus Zufall, Launch-Stress oder „mal schauen, was kommt“</li>
-          <li>vor dir herschieben, weil du nicht weißt, was jetzt wirklich dran ist</li>
-          <li>Business auf Kosten deines Lebens und deiner Energie</li>
-          <li>Ferien, die du dir zwischen zwei Launches abknapsen musst</li>
-          <li>Angebote, die Geld bringen, aber dich leer machen</li>
-          <li>ein Offline-Business, das untergeht, weil online immer lauter ist</li>
-          <li>machen, was andere dir sagen, dass du machen sollst</li>
-        </ul>
-      </div>
-      <div class="reveal">
-        <div class="eyebrow">Was du mitnimmst</div>
+        <div class="eyebrow">Mitte Januar</div>
         <h2>Danach <em>hast du</em></h2>
         <ul class="lst da">
           <li>Mehr Umsatz, weil du weißt, mit welchen Angeboten du dein Ziel erreichst und welche du weglässt</li>
@@ -537,7 +526,7 @@ footer a{text-decoration:none}
           <li>Mehr Energie, weil dein Plan zu deinem Leben passt</li>
           <li>Weniger Prokrastination, weil du weißt, was diese Woche dran ist und was warten kann</li>
           <li>Weniger Ausbrennen, weil du nicht mehr alles gleichzeitig machen musst</li>
-          <li>Eine KI an deiner Seite, die deinen Plan kennt und dich dranhält</li>
+          <li>Eine KI-Assistentin, die deinen Plan kennt und dir einen Stups gibt, wenn du etwas vor dir herschiebst</li>
           <li>Mehr Fokus auf die Dinge, die Umsatz bringen und dir Energie geben</li>
           <li>Ein Business, das zu dir passt, online wie offline, auch wenn der Coaching-Markt gerade etwas anderes vorgibt</li>
         </ul>
@@ -574,7 +563,7 @@ footer a{text-decoration:none}
       <div class="mod open reveal">
         <button class="mod-head" type="button" aria-expanded="true">
           <span class="mod-num">01</span>
-          <span><span class="mod-date">Donnerstag, 17.12.2026 · 9 Uhr</span><h3>Business + Life Reset</h3><p>Klarheit darüber, wo du stehst und wohin du möchtest.</p></span>
+          <span><span class="mod-date">Donnerstag, 17.12.2026 · 9 Uhr</span><h3>Business + Life Reset</h3><p>Wo du gerade stehst und wo du hinwillst.</p></span>
           <span class="plus"></span>
         </button>
         <div class="mod-body"><div><div class="mod-inner">
@@ -583,12 +572,12 @@ footer a{text-decoration:none}
             <li>Wo stehst du aktuell mit deinen Angeboten und Umsätzen?</li>
             <li>Was funktioniert bereits gut und was kostet dich nur Zeit und Energie?</li>
             <li>Was willst du beibehalten, verändern oder loslassen?</li>
-            <li>Was willst du 2027 privat erleben und nicht nur beruflich erreichen?</li>
+            <li>Was willst du 2027 privat erleben und was beruflich erreichen?</li>
             <li>Will ich das 2027 wirklich noch oder mache ich es nur, weil ich es schon immer so gemacht habe?</li>
           </ul>
           <p>Wir schauen uns auch deine Umsätze aus 2026 an. Und du gehst deine Angebote einmal durch und fragst dich bei jedem ehrlich, ob es dir Umsatz bringt und ob es dir Energie gibt.</p>
           <p>Am Ende legen wir zusammen dein KI-Projekt an und bereiten deine KI vor, da kommt ab jetzt alles rein.</p>
-          <p class="result">Du bekommst Klarheit darüber, was dein Business jetzt wirklich braucht.</p>
+          <p class="result">Danach weißt du, was du 2027 behalten willst und was du loslassen kannst.</p>
         </div></div></div>
       </div>
 
@@ -632,7 +621,7 @@ footer a{text-decoration:none}
         </button>
         <div class="mod-body"><div><div class="mod-inner">
           <p>Wir betrachten deine bestehenden Online- und Offline-Angebote und entwickeln daraus deine Umsatzstrategie für 2027.</p>
-          <p>Dabei schauen wir nicht nur darauf, wie du mit dem, was du bereits hast, deine Umsatzziele erreichen kannst. Wir denken bewusst weiter. Und wir streichen bewusst.</p>
+          <p>Dabei schauen wir, wie du mit dem, was du schon hast, deine Umsatzziele erreichst. Und wir denken weiter und streichen auch mal was.</p>
           <ul>
             <li>Welche Angebote bringen Umsatz und Energie? Die bleiben und bekommen mehr Raum.</li>
             <li>Welche Angebote bringen Umsatz, kosten dich aber deine Energie? Die bauen wir um oder lassen sie los.</li>
@@ -642,7 +631,7 @@ footer a{text-decoration:none}
             <li>Wie bekommt dein Offline-Business wieder den Platz, den es verdient?</li>
           </ul>
           <p>Du löst dich von der Vorstellung, dass du dein Business immer nur innerhalb der bisherigen Möglichkeiten weiterentwickeln kannst oder so, wie es der Coaching-Markt gerade vorgibt.</p>
-          <p class="result">Du entwickelst eine Umsatzstrategie, die nicht nur auf dem basiert, was heute schon da ist, sondern auch auf dem, was du 2027 möglich machen möchtest. Und die zu deinem Leben passt und zu deiner Persönlichkeit.</p>
+          <p class="result">Du gehst mit einer Umsatzstrategie raus, die zu deinem Leben und zu deiner Persönlichkeit passt. Und in der auch Platz ist für das, was du 2027 möglich machen möchtest.</p>
         </div></div></div>
       </div>
 
@@ -653,10 +642,10 @@ footer a{text-decoration:none}
           <span class="plus"></span>
         </button>
         <div class="mod-body"><div><div class="mod-inner">
-          <p>Der beste Jahresplan bringt wenig, wenn er nach wenigen Wochen in der Schublade verschwindet.</p>
+          <p>Der beste Jahresplan bringt wenig, wenn er nach wenigen Wochen im Schrank verstaubt.</p>
           <p>Wir entwickeln deine nächsten konkreten Umsetzungsschritte und verbinden deine Planung mit deinem KI-Projekt.</p>
-          <p>Am Ende hast du deinen Jahresfahrplan und deine Umsatzstrategie, also einen Plan, den du im Februar auch noch benutzt.</p>
-          <p class="result">Deine Strategie gibt die Richtung vor. Deine KI unterstützt dich auf dem Weg dorthin. Und du entscheidest, wohin die Reise geht.</p>
+          <p>Am Ende hast du deinen Jahresfahrplan und deine Umsatzstrategie, also einen Plan, mit dem du im Februar noch arbeitest.</p>
+          <p class="result">Die Richtung gibt deine Strategie vor, deine KI-Assistentin erinnert dich im Alltag daran und entscheiden tust immer noch du.</p>
         </div></div></div>
       </div>
 
@@ -686,174 +675,20 @@ footer a{text-decoration:none}
       <p>Am 17. Dezember legen wir zusammen dein KI-Projekt an. Du bekommst von mir eine vorbereitete Vorlage und ein Video-Training dazu, das geht auch ohne Vorkenntnisse.</p>
       <p>Und dann wächst sie mit. Zwischen den Jahren sammelst du dort deine Antworten und im Januar kommen deine Strategie und dein Jahresplan dazu. Am Ende hast du eine Assistentin, die dein Business und dein Leben kennt.</p>
       <p>Sie hilft dir, deine Jahresziele in Monats-, Wochen- und Tagesprioritäten zu übersetzen. Wenn du sie am Montag fragst, was diese Woche dran ist, antwortet sie aus deinem Plan heraus. Sie klopft dir auch mal auf die Finger, wenn du etwas vor dir herschiebst, Ausweichmanöver fährst oder dich dein Perfektionismus wieder ausbremst. Und ihr schaut regelmäßig zusammen drauf, was geklappt hat und was du änderst.</p>
+      <figure class="ki-shot">
+        <div class="chat" role="group" aria-label="Beispiel aus Nicoles eigener KI-Assistentin">
+          <p class="chat-q"><span>Ich</span>Was ist für diese Woche geplant. Nach Prioritäten und kontrolliere mein Dashboard, ob alle Aufgaben erfüllt sind und ich im Plan bin</p>
+          <div class="chat-a"><span>Meine KI-Assistentin</span>
+            <p>Heute ist der letzte Anmeldetag fürs Stoffwechsel-Mentoring. Also schreibst du in deiner Verkaufsstunde zuerst persönlich die Frauen an, die geklickt haben. Alles andere kommt danach.</p>
+            <p>Heute Vormittag ist dein Strategietag. Den beendest du erst, wenn nur noch drei Projekte laufen, weil am Freitag die Frist für den Januar-Termin abläuft.</p>
+            <p>Für dein Gruppenangebot zur Jahresplanung bleiben nur noch ein paar Tage bis zum Early Bird. Gib diese Woche die Texte für die Seite frei, sonst kann ja niemand buchen.</p>
+            <p>Übrigens stehen in deinem Projektordner gerade zehn Projekte auf aktiv, obwohl wir drei ausgemacht hatten.</p>
+          </div>
+        </div>
+        <figcaption>So sieht das bei mir aus, wenn ich meine eigene KI-Assistentin am Montag frage, was diese Woche dran ist.</figcaption>
+      </figure>
       <p>Das Projekt liegt in deinem eigenen Konto, du nimmst es also mit und benutzt es das ganze Jahr.</p>
       <p>Ich arbeite selber mit Claude und würde dir das auch empfehlen, es geht aber genauso mit ChatGPT.</p>
-    </div>
-  </div>
-</section>
-
-<!-- INKLUSIVE -->
-<section class="dark" id="inklusive">
-  <div class="wrap">
-    <div class="reveal narrow" style="margin:0">
-      <div class="eyebrow" style="color:var(--champagner)">Alles drin</div>
-      <h2>Das ist alles in deinem <em>Blueprint 2027</em> enthalten</h2>
-    </div>
-    <div class="incl reveal">
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17"/><path d="M12 7v5l3 2"/></svg>Vier gemeinsame Live-Termine à 90 Minuten, in denen du an deinem eigenen Plan arbeitest und ich mit draufschaue</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><path d="M9 11l3 3 8-8"/><path d="M20 12v7H4V5h11"/></svg>Fragen für dein Business zwischen den Jahren</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><path d="M4 19l5-6 4 3 7-9"/><path d="M14 7h6v6"/></svg>Deine individuelle Umsatz- und Angebotsstrategie für 2027, online und offline</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" /><path d="M3 10h18M8 3v4M16 3v4"/></svg>Dein Business- und Life-Fahrplan mit Jahres-, Quartals- und Monatsplanung, in dem deine freien Tage schon drinstehen</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="5" y="7" width="14" height="12"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg>Eine vorbereitete Vorlage und ein Video-Training für dein KI-Projekt, damit du auch ohne Vorkenntnisse loslegen kannst</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="5" y="4" width="5" height="7"/><rect x="14" y="6" width="4" height="6"/><path d="M3 20v-5h9v5M14 20v-4h7v4"/></svg>Austausch in einer exklusiven Runde mit höchstens 8 Frauen. Du bist mit deinen Fragen nicht allein</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="3" y="5" width="18" height="12" /><path d="M10 9l4 2-4 2z"/><path d="M8 21h8"/></svg>Zugang zum Member-Bereich mit den Aufzeichnungen aller Termine und allen zusätzlichen Materialien, falls du mal nicht live dabei sein kannst</div>
-      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.800-1.400-8-4.500-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg>Geld-zurück-Garantie bis 7 Tage nach dem ersten Termin. Du kannst in Ruhe ausprobieren, ob es passt</div>
-    </div>
-  </div>
-</section>
-
-<!-- BONUS -->
-<section class="soft" id="bonus">
-  <div class="wrap">
-    <div class="reveal narrow" style="margin:0 0 44px">
-      <div class="eyebrow">Für Schnellentscheiderinnen</div>
-      <h2>Wenn du dich schnell entscheidest, bekommst du <em>noch etwas dazu</em></h2>
-      <p>Für Schnellentscheiderinnen gibt es ein Special, nämlich ein 1:1 mit mir vor dem Start und einen Check-in im Februar. Was du davon bekommst, hängt davon ab, wie schnell du bist.</p>
-    </div>
-    <div class="bonus reveal">
-      <div class="left">
-        <span class="tag">Super Early Bird</span>
-        <h3>Dein Kassensturz: alles auf den Tisch</h3>
-        <p>30 Minuten nur wir zwei. Du legst alles auf den Tisch, also deine Angebote, deine Preise, deine Umsätze aus 2026 und die Ideen, die seit Monaten in der Schublade liegen. Und ich sage dir, wo ich deine Goldnuggets sehe. Damit kommst du am 17. Dezember schon sortiert in den ersten Termin.</p>
-        <p style="font-size:14px">Vorher schickst du mir einen kurzen Fragebogen und deine Angebote.</p>
-        <p class="frist">Bis einschließlich 25.11.2026 oder bis drei Plätze vergeben sind. Den Check-in im Februar bekommst du dann auch.</p>
-        <div class="b2">
-          <span class="tag">Early Bird</span>
-          <h3>Check-in im Februar</h3>
-          <p>Am Freitag, 19. Februar 2027, um 9 Uhr sehen wir uns noch mal zum Check-in, 45 Minuten. Du bist mit deinem Plan dann nicht allein. Wir justieren nach, wo er noch nicht zu deinem Alltag passt und klären deine offenen Fragen.</p>
-          <p class="frist">Bis einschließlich 04.12.2026, zusammen mit dem Preis von 590 € statt 690 €.</p>
-        </div>
-      </div>
-      <div class="right">
-        <div class="lbl" id="cd-lbl">Super Early Bird endet in</div>
-        <div class="countdown" id="countdown" aria-live="polite">
-          <div><b data-cd="d">00</b><span>Tage</span></div>
-          <div><b data-cd="h">00</b><span>Std</span></div>
-          <div><b data-cd="m">00</b><span>Min</span></div>
-          <div><b data-cd="s">00</b><span>Sek</span></div>
-        </div>
-        <small id="cd-text">Super Early Bird bis einschließlich 25.11.2026 oder bis drei Plätze vergeben sind. Der Early Bird und der Preis von 590 € gelten bis einschließlich 04.12.2026, danach kostet der Blueprint 690 €.</small>
-        <a class="btn" id="bonus-btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" style="margin-top:26px;align-self:flex-start"><span id="bonus-btn-t">Platz mit Bonus sichern</span> <span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PREIS -->
-<section id="investition">
-  <div class="wrap">
-    <div class="reveal" style="text-align:center">
-      <div class="eyebrow">Deine Investition</div>
-      <h2>Business &amp; Life <em>Blueprint 2027</em></h2>
-    </div>
-    <div class="stufen vor-preis reveal">
-      <div data-ende="seb"><span class="st-name">Super Early Bird</span><span class="st-frist">bis 25.11.2026 oder bis 3 Plätze weg sind</span><span class="st-preis"><s>690 €</s> 590 €</span><span class="st-plus">mit Kassensturz 1:1 und Check-in im Februar</span></div>
-      <div data-ende="eb"><span class="st-name">Early Bird</span><span class="st-frist">bis 04.12.2026</span><span class="st-preis"><s>690 €</s> 590 €</span><span class="st-plus">mit Check-in im Februar</span></div>
-      <div data-ende="reg"><span class="st-name">Regulär</span><span class="st-frist">05.12. bis 13.12.2026 oder bis alle 8 Plätze weg sind</span><span class="st-preis">690 €</span><span class="st-plus">ohne Bonus</span></div>
-    </div>
-    <div class="price-card reveal">
-      <p class="stufe" id="stufe">Frühbucherpreis bis einschließlich 04.12.2026</p>
-      <div class="toggle" id="toggle" role="tablist" aria-label="Zahlungsweise">
-        <span class="pill" id="pill"></span>
-        <button type="button" class="active" data-amount="590" data-statt="690 €" data-suffix="" data-note="Einmalzahlung" data-netto="495,80 € netto">Einmalzahlung</button>
-        <button type="button" data-amount="310" data-statt="2 × 360 €" data-suffix="× 2" data-note="2 Raten à 310 € (620 € gesamt)" data-netto="je Rate 260,50 € netto">2 Raten</button>
-        <button type="button" data-amount="215" data-statt="3 × 250 €" data-suffix="× 3" data-note="3 Raten à 215 € (645 € gesamt)" data-netto="je Rate 180,67 € netto">3 Raten</button>
-      </div>
-      <p class="statt" id="statt"><s id="statt-wert">690 €</s> regulär</p>
-      <div class="amount"><span id="amount">590</span> € <small id="suffix"></small></div>
-      <p class="netto">inkl. MwSt. · <span id="netto">495,80 € netto</span></p>
-      <p class="amount-note" id="amount-note">Einmalzahlung</p>
-      <ul class="werte">
-        <li><span>4 Live-Termine à 90 Minuten (je 250 €)<small>in einer exklusiven Runde mit höchstens 8 Frauen</small></span><b>1.000 €</b></li>
-        <li><span>Deine persönliche KI-Assistentin<small>mit Vorlage und Video-Training</small></span><b>150 €</b></li>
-        <li id="w-ks"><span>Kassensturz 1:1, 30 Minuten<small>Super Early Bird</small></span><b>165 €</b></li>
-        <li id="w-ci"><span>Check-in im Februar, 45 Minuten<small>Early Bird</small></span><b>150 €</b></li>
-        <li class="summe"><span>Gesamtwert</span><b id="w-summe">1.465 €</b></li>
-      </ul>
-      <p class="dazu">Dazu kommen die Fragen für dein Business zwischen den Jahren, deine Umsatz- und Angebotsstrategie 2027, dein Business- und Life-Fahrplan, der Member-Bereich mit allen Aufzeichnungen und die Geld-zurück-Garantie bis 7 Tage nach dem ersten Termin.</p>
-      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" id="anmelden">Ich sichere mir meinen Platz <span class="arr">→</span></a>
-      <p class="early" id="early">Bis einschließlich 25.11.2026 (oder bis drei Plätze vergeben sind) bekommst du den Kassensturz zu zweit (30 Minuten) und den Check-in im Februar (45 Minuten) dazu. Bis einschließlich 04.12.2026 ist der Check-in im Februar dabei. Ab dem 05.12.2026 kostet der Blueprint 690 € inkl. MwSt. und es gibt keinen Bonus mehr. Anmeldeschluss ist der 13.12.2026, oder früher, wenn alle 8 Plätze vergeben sind.</p>
-    </div>
-    <div class="wa reveal">
-      <p>Falls du noch Fragen hast oder dir nicht sicher bist, lass uns das unkompliziert per WhatsApp klären.</p>
-      <a class="btn line" href="https://wa.me/message/QXAYPG3GPUZRF1" target="_blank" rel="noopener">Per WhatsApp schreiben <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- FÜR DICH -->
-<section class="soft" id="fuer-dich">
-  <div class="wrap narrow">
-    <div class="reveal">
-      <div class="eyebrow">Passt das zu dir?</div>
-      <h2>Ist Business &amp; Life Blueprint 2027 <em>das Richtige</em> für dich?</h2>
-      <p>Das Programm ist für dich, wenn du:</p>
-    </div>
-    <div class="fit reveal">
-      <div>bereits selbstständig bist und dein Business gezielt weiterentwickeln möchtest.</div>
-      <div>mehrere Angebote hast oder neue Angebotsmöglichkeiten entdecken willst.</div>
-      <div>online und offline arbeitest oder beide Bereiche verbinden möchtest und dein Offline-Business nicht untergehen lassen willst.</div>
-      <div>deine Umsätze strategischer und planbarer entwickeln willst.</div>
-      <div>viele Ideen hast und einen klaren roten Faden suchst.</div>
-      <div>dein Business nicht auf Kosten deiner Lebensqualität wachsen lassen möchtest.</div>
-      <div>Struktur möchtest, ohne deine kreative Freiheit aufzugeben.</div>
-      <div>dich fragst, ob du das eigentlich noch machst, weil du es willst oder weil andere es dir gesagt haben.</div>
-    </div>
-    <div class="turn reveal">
-      <p>Du musst nicht mit einem fertigen Plan kommen. Du musst auch noch nicht wissen, wie dein Business Ende 2027 genau aussehen soll.</p>
-      <p class="big" style="margin-top:12px">Du brauchst nur die Bereitschaft, dein Business <em>bewusst zu gestalten</em> und neue Möglichkeiten zuzulassen.</p>
-      <p style="margin-top:14px">Und Altes loszulassen, wenn es nicht mehr zu dir passt.</p>
-    </div>
-  </div>
-</section>
-
-<!-- KURZ-ZITAT 3 -->
-<div class="pull on-papier reveal">
-  <div class="wrap">
-    <figure>
-      <span class="ava ini" aria-hidden="true">M</span>
-      <div>
-        <blockquote>„Sie schafft es zu motivieren, die richtigen nächsten Schritte zu gehen und nebenbei Ausblicke zu geben, ohne dabei zu überfordern.“</blockquote>
-        <figcaption><b>Marion Janda</b> · Mentaltrainerin für Musiker</figcaption>
-      </div>
-    </figure>
-  </div>
-</div>
-
-<!-- ÜBER MICH -->
-<section class="soft" id="ueber-mich">
-  <div class="wrap">
-    <div class="about">
-      <div class="portrait reveal">
-        <img src="images/nicole.jpg" alt="Nicole Lurz, Business-Mentorin und Heilpraktikerin" loading="lazy" width="800" height="1000">
-        <div class="badge"><b>800+</b><span>begleitete Ärzte, Therapeuten,<br>Heilpraktiker und Coaches</span></div>
-      </div>
-      <div class="reveal">
-        <div class="eyebrow">Über mich</div>
-        <h2>Ich bin Nicole. Ich kenne das Jonglieren mit <em>mehreren Standbeinen</em> aus meinem eigenen Alltag.</h2>
-        <p>Ich bin Diplom-Kauffrau und seit 14 Jahren Heilpraktikerin. Ich habe meine eigene Naturheilpraxis in Wiesloch und arbeite daneben online als Mentorin, für Gesundheit und für Business. Ich weiß also ziemlich genau, wie sich das anfühlt, wenn Praxistermine, Online-Angebote, Marketing und neue Ideen alle gleichzeitig nach dir rufen.</p>
-        <p>Gut zweieinhalb Jahre lang war ich außerdem Business-Mentorin bei einem namhaften Business-Coach und habe in dieser Zeit mehr als 800 Ärzte, Therapeuten, Heilpraktiker und Coaches begleitet. Bekannt war ich dort für meinen Fokus und meine Klarheit und dafür, dass ich strategisch denke. Und ich habe immer wieder erlebt, dass es fast nie an Ideen fehlt. Meistens fehlt eher jemand, der mit draufschaut und mit dir sortiert, was davon jetzt dran ist und was ruhig bis zum Herbst warten kann oder ganz gehen darf.</p>
-        <p>Ich kann mich schnell in ein Business hineindenken und Dinge auf den Punkt bringen. Im Blueprint machen wir das für dein ganzes Jahr. Du gehst mit einem Plan raus, den du im Februar auch noch benutzt.</p>
-        <div class="creds">
-          <span>Diplom-Kauffrau (BWL)</span>
-          <span>14 Jahre Heilpraktikerin</span>
-          <span>20+ Jahre Finanz- und Unternehmensberatung</span>
-          <span>2,5 Jahre Business-Mentorin</span>
-          <span>Personal Brand Consultant (Business-Archetypen)</span>
-          <span>Mastery of Training and Leading (Yvonne Schönau)</span>
-          <span>Fachmentorin am Mojo-Institut</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -897,6 +732,175 @@ footer a{text-decoration:none}
   </div>
 </section>
 
+<!-- ÜBER MICH -->
+<section class="soft" id="ueber-mich">
+  <div class="wrap">
+    <div class="about">
+      <div class="portrait reveal">
+        <img src="images/nicole.jpg" alt="Nicole Lurz, Business-Mentorin und Heilpraktikerin" loading="lazy" width="800" height="1000">
+        <div class="badge"><b>800+</b><span>begleitete Ärzte, Therapeuten,<br>Heilpraktiker und Coaches</span></div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Über mich</div>
+        <h2>Ich bin Nicole. Ich kenne das Jonglieren mit <em>mehreren Standbeinen</em> aus meinem eigenen Alltag.</h2>
+        <p>Ich bin Diplom-Kauffrau und seit 14 Jahren Heilpraktikerin. Ich habe meine eigene Naturheilpraxis in Wiesloch und arbeite daneben online als Mentorin, für Gesundheit und für Business. Ich weiß also ziemlich genau, wie sich das anfühlt, wenn Praxistermine, Online-Angebote, Marketing und neue Ideen alle gleichzeitig nach dir rufen.</p>
+        <p>Bei mir selber hat das mit der Planung lange überhaupt nicht geklappt. Richtig gemerkt habe ich es erst, als ich letztes Jahr 2026 planen wollte. Da sollte ich meine Launch-Phasen festlegen und saß da und habe überlegt, wann jetzt der Launch sein soll und wann mein 12-Wochen-Programm. Das passte überhaupt nicht in mein Jahr mit den ganzen Ferien, Feiertagen und der Familie. Und allein die Vorstellung, zwölf Wochen am Stück an ein Gruppenmentoring gebunden zu sein, hat mich total blockiert, weil ich ein freiheitsliebender Mensch bin und mich da sehr eingeengt gefühlt habe.</p>
+        <p>Durch die verschiedenen Hüte hatte ich außerdem oft das Gefühl, dass ich den Blick verliere und irgendwas vergessen habe. Und das hat zu Überforderung geführt.</p>
+        <p>Deshalb habe ich andere Formate und andere Angebote für mich entwickelt und herausgefunden, was zu mir passt und worauf ich maximal Bock habe. Und das ist für beide Seiten hilfreich, für mich und für die Frauen, mit denen ich arbeite. Heute setze ich mit meinem Jahresplan den Rahmen und kann trotzdem kreativ bleiben. Zusammen mit der KI fällt es mir viel leichter, on track zu bleiben und alles im Blick zu behalten.</p>
+        <p>Gut zweieinhalb Jahre lang war ich außerdem Business-Mentorin bei einem namhaften Business-Coach und habe in dieser Zeit mehr als 800 Ärzte, Therapeuten, Heilpraktiker und Coaches begleitet. Bekannt war ich dort für meinen Fokus und meine Klarheit und dafür, dass ich strategisch denke. Und ich habe immer wieder erlebt, dass es fast nie an Ideen fehlt. Meistens fehlt eher jemand, der mit draufschaut und mit dir sortiert, was davon jetzt dran ist und was ruhig bis zum Herbst warten kann oder ganz gehen darf.</p>
+        <p>Ich kann mich schnell in ein Business hineindenken und Dinge auf den Punkt bringen. Im Blueprint machen wir das für dein ganzes Jahr. Du gehst mit einem Plan raus, mit dem du im Februar noch arbeitest.</p>
+        <div class="creds">
+          <span>Diplom-Kauffrau (BWL)</span>
+          <span>14 Jahre Heilpraktikerin</span>
+          <span>20+ Jahre Finanz- und Unternehmensberatung</span>
+          <span>2,5 Jahre Business-Mentorin</span>
+          <span>Personal Brand Consultant (Business-Archetypen)</span>
+          <span>Mastery of Training and Leading (Yvonne Schönau)</span>
+          <span>Fachmentorin am Mojo-Institut</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INKLUSIVE -->
+<section class="dark" id="inklusive">
+  <div class="wrap">
+    <div class="reveal narrow" style="margin:0">
+      <div class="eyebrow" style="color:var(--champagner)">Auf einen Blick</div>
+      <h2>Das ist alles in deinem <em>Blueprint 2027</em> enthalten</h2>
+    </div>
+    <div class="incl reveal">
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17"/><path d="M12 7v5l3 2"/></svg>Vier gemeinsame Live-Termine à 90 Minuten, in denen du an deinem eigenen Plan arbeitest und ich mit draufschaue</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><path d="M9 11l3 3 8-8"/><path d="M20 12v7H4V5h11"/></svg>Fragen für dein Business zwischen den Jahren</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><path d="M4 19l5-6 4 3 7-9"/><path d="M14 7h6v6"/></svg>Deine individuelle Umsatz- und Angebotsstrategie für 2027, online und offline</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" /><path d="M3 10h18M8 3v4M16 3v4"/></svg>Dein Business- und Life-Fahrplan mit Jahres-, Quartals- und Monatsplanung, in dem deine freien Tage schon drinstehen</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="5" y="7" width="14" height="12"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg>Eine vorbereitete Vorlage und ein Video-Training für dein KI-Projekt, damit du auch ohne Vorkenntnisse loslegen kannst</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="5" y="4" width="5" height="7"/><rect x="14" y="6" width="4" height="6"/><path d="M3 20v-5h9v5M14 20v-4h7v4"/></svg>Austausch in einer exklusiven Runde mit höchstens 8 Frauen. Du bist mit deinen Fragen nicht allein</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><rect x="3" y="5" width="18" height="12" /><path d="M10 9l4 2-4 2z"/><path d="M8 21h8"/></svg>Zugang zum Member-Bereich mit den Aufzeichnungen aller Termine und allen zusätzlichen Materialien, falls du mal nicht live dabei sein kannst</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB4CE" stroke-width="1.6"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.800-1.400-8-4.500-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg>Geld-zurück-Garantie bis 7 Tage nach dem ersten Termin. Du kannst in Ruhe ausprobieren, ob es passt</div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="soft" id="bonus">
+  <div class="wrap">
+    <div class="reveal narrow" style="margin:0 0 44px">
+      <div class="eyebrow">Early Bird</div>
+      <h2>Wenn du dich schnell entscheidest, bekommst du <em>noch etwas dazu</em></h2>
+      <p>Das ist ein 1:1 mit mir vor dem Start und ein Check-in im Februar. Was du davon bekommst, hängt davon ab, wie schnell du bist.</p>
+    </div>
+    <div class="bonus reveal">
+      <div class="left">
+        <span class="tag">Super Early Bird</span>
+        <h3>Kassensturz zu zweit</h3>
+        <p>30 Minuten nur wir zwei. Du legst alles auf den Tisch, also deine Angebote, deine Preise, deine Umsätze aus 2026 und die Ideen, die seit Monaten in der Schublade liegen. Und ich sage dir, wo ich deine Goldnuggets sehe. Damit kommst du am 17. Dezember schon sortiert in den ersten Termin.</p>
+        <p style="font-size:14px">Vorher schickst du mir einen kurzen Fragebogen und deine Angebote.</p>
+        <p class="frist">Bis einschließlich 25.11.2026 oder bis drei Plätze vergeben sind. Den Check-in im Februar bekommst du dann auch.</p>
+        <div class="b2">
+          <span class="tag">Early Bird</span>
+          <h3>Check-in im Februar</h3>
+          <p>Am Freitag, 19. Februar 2027, um 9 Uhr sehen wir uns noch mal zum Check-in, 45 Minuten. Du bist mit deinem Plan dann nicht allein. Wir justieren nach, wo er noch nicht zu deinem Alltag passt und klären deine offenen Fragen.</p>
+          <p class="frist">Bis einschließlich 04.12.2026, zusammen mit dem Preis von 590 € statt 690 €.</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="lbl" id="cd-lbl">Super Early Bird endet in</div>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div><b data-cd="d">00</b><span>Tage</span></div>
+          <div><b data-cd="h">00</b><span>Std</span></div>
+          <div><b data-cd="m">00</b><span>Min</span></div>
+          <div><b data-cd="s">00</b><span>Sek</span></div>
+        </div>
+        <small id="cd-text"></small>
+        <a class="btn" id="bonus-btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" style="margin-top:26px;align-self:flex-start"><span id="bonus-btn-t">Platz mit Bonus sichern</span> <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREIS -->
+<section id="investition">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <div class="eyebrow">Deine Investition</div>
+      <h2>Business &amp; Life <em>Blueprint 2027</em></h2>
+    </div>
+    <div class="stufen vor-preis reveal">
+      <div data-ende="seb"><span class="st-name">Super Early Bird</span><span class="st-frist">bis 25.11.2026 oder bis 3 Plätze weg sind</span><span class="st-preis"><s>690 €</s> 590 €</span><span class="st-plus">mit Kassensturz 1:1 und Check-in im Februar</span></div>
+      <div data-ende="eb"><span class="st-name">Early Bird</span><span class="st-frist">bis 04.12.2026</span><span class="st-preis"><s>690 €</s> 590 €</span><span class="st-plus">mit Check-in im Februar</span></div>
+      <div data-ende="reg"><span class="st-name">Regulär</span><span class="st-frist">05.12. bis 13.12.2026 oder bis alle 8 Plätze weg sind</span><span class="st-preis">690 €</span><span class="st-plus">ohne Bonus</span></div>
+    </div>
+    <div class="price-card reveal">
+      <p class="stufe" id="stufe">Frühbucherpreis bis einschließlich 04.12.2026</p>
+      <div class="toggle" id="toggle" role="tablist" aria-label="Zahlungsweise">
+        <span class="pill" id="pill"></span>
+        <button type="button" class="active" data-amount="590" data-statt="690 €" data-suffix="" data-note="Einmalzahlung" data-netto="495,80 € netto">Einmalzahlung</button>
+        <button type="button" data-amount="310" data-statt="2 × 360 €" data-suffix="× 2" data-note="2 Raten à 310 € (620 € gesamt)" data-netto="je Rate 260,50 € netto">2 Raten</button>
+        <button type="button" data-amount="215" data-statt="3 × 250 €" data-suffix="× 3" data-note="3 Raten à 215 € (645 € gesamt)" data-netto="je Rate 180,67 € netto">3 Raten</button>
+      </div>
+      <p class="statt" id="statt"><s id="statt-wert">690 €</s> regulär</p>
+      <div class="amount"><span id="amount">590</span> € <small id="suffix"></small></div>
+      <p class="netto">inkl. MwSt. · <span id="netto">495,80 € netto</span></p>
+      <p class="amount-note" id="amount-note">Einmalzahlung</p>
+      <ul class="werte">
+        <li><span>4 Live-Termine à 90 Minuten (je 250 €)<small>in einer exklusiven Runde mit höchstens 8 Frauen</small></span><b>1.000 €</b></li>
+        <li><span>Deine persönliche KI-Assistentin<small>mit Vorlage und Video-Training</small></span><b>150 €</b></li>
+        <li id="w-ks"><span>Kassensturz 1:1, 30 Minuten<small>Super Early Bird</small></span><b>165 €</b></li>
+        <li id="w-ci"><span>Check-in im Februar, 45 Minuten<small>Early Bird</small></span><b>150 €</b></li>
+        <li class="summe"><span>Gesamtwert</span><b id="w-summe">1.465 €</b></li>
+      </ul>
+      <p class="dazu">Dazu kommen die Fragen für dein Business zwischen den Jahren, deine Umsatz- und Angebotsstrategie 2027, dein Business- und Life-Fahrplan, der Member-Bereich mit allen Aufzeichnungen und die Geld-zurück-Garantie bis 7 Tage nach dem ersten Termin.</p>
+      <a class="btn" href="https://alfima.com/nicolelurz/business-life-blueprint-2027/purchase" id="anmelden">Ich sichere mir meinen Platz <span class="arr">→</span></a>
+      <p class="early" id="early" hidden>Bis einschließlich 25.11.2026 (oder bis drei Plätze vergeben sind) bekommst du den Kassensturz zu zweit (30 Minuten) und den Check-in im Februar (45 Minuten) dazu. Bis einschließlich 04.12.2026 ist der Check-in im Februar dabei. Ab dem 05.12.2026 kostet der Blueprint 690 € inkl. MwSt. und es gibt keinen Bonus mehr. Anmeldeschluss ist der 13.12.2026, oder früher, wenn alle 8 Plätze vergeben sind.</p>
+    </div>
+    <div class="wa reveal">
+      <p>Falls du noch Fragen hast oder dir nicht sicher bist, lass uns das unkompliziert per WhatsApp klären.</p>
+      <a class="btn line" href="https://wa.me/message/QXAYPG3GPUZRF1" target="_blank" rel="noopener">Per WhatsApp schreiben <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FÜR DICH -->
+<section class="soft" id="fuer-dich">
+  <div class="wrap narrow">
+    <div class="reveal">
+      <div class="eyebrow">Vor deiner Entscheidung</div>
+      <h2>Ist Business &amp; Life Blueprint 2027 <em>das Richtige</em> für dich?</h2>
+      <p>Das Programm ist für dich, wenn du:</p>
+    </div>
+    <div class="fit reveal">
+      <div>bereits selbstständig bist und dein Business gezielt weiterentwickeln möchtest.</div>
+      <div>mehrere Angebote hast oder neue Angebotsmöglichkeiten entdecken willst.</div>
+      <div>online und offline arbeitest oder beide Bereiche verbinden möchtest und dein Offline-Business nicht untergehen lassen willst.</div>
+      <div>deine Umsätze strategischer und planbarer entwickeln willst.</div>
+      <div>viele Ideen hast und einen klaren roten Faden suchst.</div>
+      <div>dein Business wachsen lassen möchtest, ohne dass deine Ferien und deine Familie dabei zu kurz kommen.</div>
+      <div>Struktur möchtest, ohne deine kreative Freiheit aufzugeben.</div>
+      <div>dich fragst, ob du das eigentlich noch machst, weil du es willst oder weil andere es dir gesagt haben.</div>
+    </div>
+    <div class="turn reveal">
+      <p>Du musst nicht mit einem fertigen Plan kommen. Du musst auch noch nicht wissen, wie dein Business Ende 2027 genau aussehen soll.</p>
+      <p class="big" style="margin-top:12px">Du brauchst nur die Bereitschaft, dein Business <em>bewusst zu gestalten</em> und neue Möglichkeiten zuzulassen.</p>
+      <p style="margin-top:14px">Und Altes loszulassen, wenn es nicht mehr zu dir passt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KURZ-ZITAT 3 -->
+<div class="pull on-papier reveal">
+  <div class="wrap">
+    <figure>
+      <span class="ava ini" aria-hidden="true">M</span>
+      <div>
+        <blockquote>„Sie schafft es zu motivieren, die richtigen nächsten Schritte zu gehen und nebenbei Ausblicke zu geben, ohne dabei zu überfordern.“</blockquote>
+        <figcaption><b>Marion Janda</b> · Mentaltrainerin für Musiker</figcaption>
+      </div>
+    </figure>
+  </div>
+</div>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap narrow">
@@ -919,7 +923,7 @@ footer a{text-decoration:none}
       </div>
       <div class="faq-item">
         <button class="faq-q" type="button" aria-expanded="false">Es gibt gerade so viele kostenlose Jahresplanungen. Was ist im Blueprint anders?<span class="plus"></span></button>
-        <div class="faq-a"><div><p>Die kostenlosen Events sind gut, um sich mal Gedanken zu machen. Da sitzt du halt mit ganz vielen Frauen im Zoom und machst danach allein dein Workbook. Im Blueprint sind wir höchstens acht und ich schaue mir dein Business mit deinen Zahlen an. Und wir planen im Januar weiter, wenn der Alltag schon wieder losgeht und die meisten Pläne aus dem Dezember schon in der Schublade liegen. Du gehst dann mit einer KI raus, die deinen Plan kennt und dich das ganze Jahr dranhält.</p></div></div>
+        <div class="faq-a"><div><p>Die kostenlosen Events sind gut, um sich mal Gedanken zu machen. Da sitzt du halt mit ganz vielen Frauen im Zoom und machst danach allein dein Workbook. Im Blueprint sind wir höchstens acht und ich schaue mir dein Business mit deinen Zahlen an. Und wir planen im Januar weiter, wenn der Alltag schon wieder losgeht und die meisten Pläne aus dem Dezember schon in der Schublade liegen. Du gehst dann mit einer KI-Assistentin raus, die deinen Plan kennt und dir das ganze Jahr über einen Stups gibt, wenn du etwas vor dir herschiebst.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" type="button" aria-expanded="false">Ich habe noch nie mit KI gearbeitet. Ist das ein Problem?<span class="plus"></span></button>
@@ -962,7 +966,7 @@ footer a{text-decoration:none}
   <div class="wrap">
     <div class="reveal">
       <div class="eyebrow" style="color:var(--champagner)">Dein Jahr</div>
-      <h2>Lass uns 2027 <em>bewusst gestalten!</em></h2>
+      <h2>2027 setzt du den Rahmen und bleibst <em>trotzdem kreativ.</em></h2>
       <p class="sub">Du musst nicht noch ein Jahr damit verbringen, auf alles zu reagieren, was gerade dringend ist.</p>
       <p class="sub" style="margin-top:14px">Du kannst entscheiden, was du aufbauen möchtest, welche Ideen Raum bekommen und welche du loslässt, weil du sie nur noch machst, weil du es schon immer so gemacht hast oder weil andere es dir gesagt haben.</p>
       <p class="claim">Dein Business. Deine Umsatzziele. Deine Energie. Dein Leben.</p>
