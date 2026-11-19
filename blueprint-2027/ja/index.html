@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Danke · Business &amp; Life Blueprint 2027</title>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+:root{
+  --nachtblau:#0F2340;--tiefblau:#1E3A5F;--kupfer:#1B4C93;--kupfer-hell:#D9C28E;--wasserblau:#8FB4CE;
+  --papier:#E8F0E8;--offwhite:#FFFFFF;--tinte:#1C1C1C;
+  --papier-soft:#C9D3E0;--papier-line:rgba(232,240,232,.14);--tinte-soft:rgba(28,28,28,.68);--line:rgba(15,35,64,.12);
+  --serif:'Spectral',Georgia,serif;--sans:'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--papier);color:var(--tinte);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--kupfer);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+
+.hero{position:relative;background:var(--nachtblau);color:var(--papier);padding:120px 0 110px;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,transparent,rgba(30,58,95,.55));pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.brand{font-family:var(--serif);font-size:22px;color:var(--papier);text-decoration:none;position:absolute;top:-72px;left:24px}
+.brand em{color:var(--wasserblau)}
+.check{width:64px;height:64px;border-radius:3px;border:1px solid var(--papier-line);display:grid;place-items:center;margin-bottom:30px;background:rgba(232,240,232,.04)}
+.check svg{width:28px;height:28px;stroke:var(--wasserblau);stroke-dasharray:40;stroke-dashoffset:40;animation:draw .9s .3s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .eyebrow{color:var(--kupfer-hell)}
+.hero h1{font-size:clamp(40px,6.4vw,74px);margin:18px 0 22px;max-width:980px}
+.hero h1 em{display:block;font-style:italic;font-weight:400;color:var(--kupfer-hell);font-size:.62em;margin-top:10px}
+.hero p.lead{font-size:18px;color:var(--papier-soft);max-width:640px}
+.hero p.lead.small{font-size:15.5px;margin-top:18px;opacity:.85}
+
+section{padding:96px 0}
+h2{font-size:clamp(32px,4.4vw,46px);margin:14px 0 28px}
+h2 em{font-style:italic;color:var(--kupfer)}
+.info{background:var(--offwhite)}
+.info p.text{max-width:680px;font-size:18px}
+.early{margin-top:26px;max-width:680px;padding:22px 24px;border-radius:3px;background:rgba(27,76,147,.1);border:1px solid rgba(27,76,147,.25);font-size:16px}
+.early[hidden]{display:none}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:34px;background:var(--nachtblau);color:var(--papier);text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;padding:15px 24px;border-radius:3px;transition:transform .25s,background .25s}
+.btn:hover{background:var(--tiefblau);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+
+.bye{background:var(--nachtblau);color:var(--papier)}
+.bye .wrap{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:center}
+.bye img{width:200px;height:250px;border-radius:3px;object-fit:cover;object-position:50% 20%;border:2px solid rgba(143,180,206,.6)}
+.bye p{font-size:18px;color:var(--papier-soft);max-width:560px}
+.bye .sig{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--kupfer-hell);margin-top:16px;line-height:1}
+
+footer{background:#0A1830;color:rgba(232,240,232,.6);font-size:13px;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--papier)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.check svg{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+@media (max-width:860px){
+  .bye .wrap{grid-template-columns:1fr;gap:28px}
+  .bye img{width:150px;height:150px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:72px 0}
+  .hero{padding:110px 0 80px}
+  .brand{left:16px}
+  .info p.text,.bye p{font-size:17px}
+}
+</style>
+<!-- GoatCounter: anonymer Seitenzähler, keine Cookies, keine personenbezogenen
+     Daten, läuft deshalb unabhängig vom Consent-Banner. Domain vor dem Pfad,
+     damit sich die Zahlen nicht mit nicole-lurz.de im selben Konto mischen. -->
+<script>window.goatcounter = { path: function (p) { return location.host + p } };</script>
+<script data-goatcounter="https://nicolelurz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="brand" href="../">Nicole <em>Lurz</em></a>
+    <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div class="eyebrow">Danke für deinen Klick</div>
+    <h1>Schön, dass du da bist.<em>Schau <span id="termin">am Samstag, 21.11., um 8 Uhr</span> in dein Postfach.</em></h1>
+    <p class="lead">Dann ist meine erste Mail bei dir. Darin zeige ich dir, wie ich mir meinen Rahmen für 2027 setze, damit genug Luft für das Unerwartete bleibt. Dazu bekommst du eine kleine Übung für deinen eigenen Rahmen.</p>
+    <p class="lead small">Bis Mitte Dezember folgen noch ein paar persönliche Mails zum Business &amp; Life Blueprint 2027. Austragen kannst du dich jederzeit über den Link unten in jeder Mail. Und damit meine Mail nicht im Werbe-Ordner landet, speicher dir meine Absenderadresse am besten gleich in deinen Kontakten.</p>
+  </div>
+</header>
+
+<section class="info">
+  <div class="wrap">
+    <div class="eyebrow reveal">Wenn du nicht warten magst</div>
+    <h2 class="reveal">Der Business &amp; Life Blueprint <em>2027</em></h2>
+    <p class="text reveal">Ab dem 17. Dezember planen wir an vier Vormittagen online dein Jahr 2027, in einer kleinen Runde von höchstens 8 Frauen. Wir fangen mit dem an, was dir privat wichtig ist. Dein Business planen wir dann drumherum.</p>
+    <p class="early reveal" id="sb" hidden>Für die ersten 3 Frauen, die bis Mittwoch, 25.11., buchen, gibt es noch ein exklusives 1:1 mit Kassensturz dazu. Du legst alles auf den Tisch und ich sage dir, wo ich deine Goldnuggets sehe.</p>
+    <p class="early reveal" id="eb" hidden>Wer bis Freitag, 04.12., bucht, bekommt den Check-in im Februar dazu. Da schauen wir zusammen, ob dein Plan zu deinem Alltag passt.</p>
+    <a class="btn reveal" href="../">Alle Infos zum Blueprint<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<section class="bye">
+  <div class="wrap">
+    <img class="reveal" src="../images/nicole-sw.jpg" alt="Nicole Lurz" width="200" height="250" loading="lazy">
+    <div class="reveal">
+      <p>Und wenn du vorher eine Frage hast, antworte einfach auf meine Mail. Die landet direkt bei mir.</p>
+      <div class="sig">Nicole</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Nicole Lurz · Business-Mentoring</span>
+    <span>Fragen? <a href="mailto:office@nicole-lurz.com">office@nicole-lurz.com</a></span>
+    <span><a href="https://nicole-lurz.de/impressum/">Impressum</a> · <a href="https://nicole-lurz.de/datenschutz/">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Bonus-Hinweis nach Datum: Kassensturz bis 25.11., Check-in bis 04.12., danach keiner
+  var now=new Date();
+  // Wer nach dem ersten Versand klickt, bekommt die erste Mail am nächsten Morgen
+  if(now>=new Date('2026-11-21T07:00:00+01:00')){document.getElementById('termin').textContent='morgen früh um 8 Uhr'}
+  var sbEnde=new Date('2026-11-26T00:00:00+01:00');
+  var ebEnde=new Date('2026-12-05T00:00:00+01:00');
+  if(now<sbEnde){document.getElementById('sb').hidden=false}
+  else if(now<ebEnde){document.getElementById('eb').hidden=false}
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
