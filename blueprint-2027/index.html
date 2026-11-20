@@ -98,7 +98,7 @@ nav.top.scrolled .links a:hover{color:var(--nachtblau)}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,transparent,rgba(30,58,95,.55));pointer-events:none}
 .hero .wrap{position:relative;z-index:2}
 .hero-photo{position:absolute;top:0;right:0;bottom:0;width:min(46vw,680px);z-index:1;
-  background:url(images/nicole-sw.jpg) no-repeat 50% 18%/cover;
+  background:url(images/nicole-sw.jpg?v=2) no-repeat 50% 18%/cover;
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 22%,#000 48%),linear-gradient(180deg,#000 62%,transparent 96%);
   -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 22%,#000 48%),linear-gradient(180deg,#000 62%,transparent 96%);mask-composite:intersect}
 .hero h1,.hero .claim,.hero p.lead,.hero .for{position:relative}
@@ -109,6 +109,8 @@ nav.top.scrolled .links a:hover{color:var(--nachtblau)}
 .hero h1 span{display:block}
 .hero .claim{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,28px);color:var(--papier);margin-bottom:28px;max-width:760px;text-wrap:balance}
 .hero p.lead{font-size:18px;color:var(--papier-soft);max-width:680px}
+.hero .ki{font-family:var(--serif);font-style:italic;font-size:1.4em;line-height:1;color:var(--champagner);white-space:nowrap}
+.hero .hl{color:var(--champagner);font-weight:600;text-decoration:underline;text-decoration-color:rgba(143,180,206,.55);text-decoration-thickness:1px;text-underline-offset:5px}
 .hero .for{margin-top:28px;padding-left:18px;border-left:2px solid var(--akzent);font-size:15px;color:var(--papier-soft);max-width:640px}
 .hero .actions{margin-top:42px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .facts{margin-top:64px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--papier-line);border:1px solid var(--papier-line);border-radius:3px;overflow:hidden}
@@ -403,9 +405,8 @@ footer a{text-decoration:none}
     <h1><span>Business &amp; Life</span><span><em>Blueprint 2027</em></span></h1>
     <p class="claim">Ein Plan für 2027, der nicht schon im Februar im Schrank einstaubt.</p>
     <p class="lead">Du hast viele Ideen und mehrere Angebote, du hast Kundinnen online und offline und nebenbei machst du noch Marketing und Buchhaltung. Und irgendwo dazwischen ist dein Leben.</p>
-    <p class="lead" style="margin-top:14px">Und bevor wir über Umsatz reden, schauen wir erst mal auf dich. Was brauchst du 2027 und wo sträubt sich in dir was, wenn du an dein Jahr denkst? Wenn dein Nervensystem bei deinem Plan nicht mitmacht, liegt er nämlich nach ein paar Wochen im Schrank, egal wie gut die Rechnung ist.</p>
-    <p class="lead" style="margin-top:14px">Die kostenlosen Jahresplanungen im Dezember sind gut, um sich mal Gedanken zu machen. Da sitzt du halt mit ganz vielen Frauen im Zoom und machst danach allein dein Workbook. Im Blueprint sind wir höchstens acht und ich schaue mir dein Business mit deinen Zahlen an. Und wir planen im Januar weiter, wenn der Alltag schon wieder losgeht und die meisten Pläne aus dem Dezember schon im Schrank liegen.</p>
-    <p class="lead" style="margin-top:14px">Und am Ende hast du eine KI-Assistentin, die deinen Plan kennt und dir liebevoll einen Stups in den Hintern gibt, wenn du was vor dir herschiebst.</p>
+    <p class="lead" style="margin-top:14px">Und bevor wir über Umsatz reden, schauen wir <span class="hl">erst mal auf dich</span>. Wenn dein Nervensystem bei deinem Plan nicht mitmacht, liegt er nämlich nach ein paar Wochen im Schrank, egal wie gut die Rechnung ist.</p>
+    <p class="lead" style="margin-top:14px">Und am Ende hast du eine <span class="ki">KI-Assistentin</span>, die deinen Plan kennt und dir liebevoll <span class="hl">einen Stups in den Hintern</span> gibt, wenn du was vor dir herschiebst.</p>
     <p class="for"><b>4 Live-Termine, höchstens 8 Frauen, exklusive Runde</b><br>17.12.2026, 08.01., 12.01. und 15.01.2027, jeweils 9 Uhr, 90 Minuten online<br><b>590 € Early Bird bis 04.12.2026</b>, danach 690 €, inkl. MwSt.<br>Anmeldeschluss 13.12.2026 oder wenn alle 8 Plätze vergeben sind</p>
     <div class="actions">
       <a class="btn" href="#investition">Ich sichere mir meinen Platz <span class="arr">→</span></a>
