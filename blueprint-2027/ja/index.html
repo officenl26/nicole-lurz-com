@@ -99,7 +99,7 @@ footer a:hover{color:var(--papier)}
     <div class="eyebrow reveal">Wenn du nicht warten magst</div>
     <h2 class="reveal">Der Business &amp; Life Blueprint <em>2027</em></h2>
     <p class="text reveal">Ab dem 17. Dezember planen wir an vier Vormittagen online dein Jahr 2027, in einer kleinen Runde von höchstens 8 Frauen. Wir fangen mit dem an, was dir privat wichtig ist. Dein Business planen wir dann drumherum.</p>
-    <p class="early reveal" id="sb" hidden>Für die ersten 3 Frauen, die bis Mittwoch, 25.11., buchen, gibt es noch ein exklusives 1:1 mit Kassensturz dazu. Du legst alles auf den Tisch und ich sage dir, wo ich deine Goldnuggets sehe.</p>
+    <p class="early reveal" id="sb" hidden>Für die ersten 3 Frauen, die bis Donnerstag, 26.11., buchen, gibt es noch ein exklusives 1:1 mit Kassensturz dazu. Du legst alles auf den Tisch und ich sage dir, wo ich deine Goldnuggets sehe.</p>
     <p class="early reveal" id="eb" hidden>Wer bis Freitag, 04.12., bucht, bekommt den Check-in im Februar dazu. Da schauen wir zusammen, ob dein Plan zu deinem Alltag passt.</p>
     <a class="btn reveal" href="../">Alle Infos zum Blueprint<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -125,11 +125,11 @@ footer a:hover{color:var(--papier)}
 
 <script>
 (function(){
-  // Bonus-Hinweis nach Datum: Kassensturz bis 25.11., Check-in bis 04.12., danach keiner
+  // Bonus-Hinweis nach Datum: Kassensturz bis 26.11., Check-in bis 04.12., danach keiner
   var now=new Date();
   // Wer nach dem ersten Versand klickt, bekommt die erste Mail am nächsten Morgen
   if(now>=new Date('2026-11-21T07:00:00+01:00')){document.getElementById('termin').textContent='morgen früh um 8 Uhr'}
-  var sbEnde=new Date('2026-11-26T00:00:00+01:00');
+  var sbEnde=new Date('2026-11-27T00:00:00+01:00');
   var ebEnde=new Date('2026-12-05T00:00:00+01:00');
   if(now<sbEnde){document.getElementById('sb').hidden=false}
   else if(now<ebEnde){document.getElementById('eb').hidden=false}
